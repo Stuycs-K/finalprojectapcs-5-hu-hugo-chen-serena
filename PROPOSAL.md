@@ -10,3 +10,5 @@ Serena Chen, Hugo Hu
 2) planetary orbit simulation of our solar system, with computational tools to see data such as orbital period, next closest approach to earth, parade of planets, lunar/solar eclipse time predictions. Inspiration from [NASA](https://eyes.nasa.gov/apps/solar-system/#/home), but 2D.
 3) Tetris (we've run out of ideas, but we take inspiration from the original tetris game, an example of which can be found at tetr.io)
 
+
+** no pinky promises about this
