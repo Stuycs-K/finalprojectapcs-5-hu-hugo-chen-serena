@@ -2,13 +2,10 @@
 
 ## Group Members:
 
-names here.(CHANGE THIS!!!!!)
+Serena Chen, Hugo Hu
        
 # IDEAS:
 
-1 statement of the problem you are solving and/or a high level description of the project. (CHANGE THIS!!!!!)
-
-2 statement of the problem you are solving and/or a high level description of the project. (CHANGE THIS!!!!!)
-
-3 statement of the problem you are solving and/or a high level description of the project. (CHANGE THIS!!!!!)
+1) photo editor implementing various common image manipulations, such as exposure, saturation, tint, white balance, cropping, denoise**, sharpening, etc. Some of these will be kernel based (very similar to what we did in class), but some will not. Inspiration: iOS Photos Editor, [DxO PhotoLab 7](https://www.dxo.com/dxo-photolab/).
+2) 
 
