@@ -1,7 +1,8 @@
 # Group Details
 
-| --- | --------- |
+
 | Period | P5, APCS |
+| --- | --------- |
 | Group Members | Hugo Hu, Serena Chen |
 | Group Name | Mango Orange Spindrift |  
 
