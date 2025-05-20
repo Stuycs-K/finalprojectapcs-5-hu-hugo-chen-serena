@@ -35,7 +35,7 @@ A description of your technical design. This should include:
 
 How you will be using the topics covered in class in the project.
 
-We will modify our Kernel lab for some
+We will modify our kernel lab for some
 
 # Project Design
 
