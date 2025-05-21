@@ -47,4 +47,23 @@ UML Diagrams and descriptions of key algorithms, classes, and how things fit tog
 
 How you are breaking down the project and who is responsible for which parts.
 
-A timeline with expected completion dates of parts of the project. (CHANGE THIS!!!!!)
+5/22 - 5/25
+Figure out together what the interface will look like and controls for each effect. Solidify all manipulations that will be added and starting working on modifier for applying manipulation as well as manipulation tracker.
+Also, find out how to load and export images from processing. 
+
+5/26 - 5/27
+Finish any work that was not finished from 5/22 - 5/25.
+Hugo: Add kernel class and its methods or any additional methods that are needed. 
+Serena: Start adding new kernels and modifying old kernels from our lab.
+
+5/28
+Hugo: Work on interface of editor and how different levels of manipulations will be achieved (ex. sliders or buttons).
+Serena: Start working on blur and sharpen code, including modifying kernels.
+
+5/29
+Hugo: Work on cropping, and assist Serena with saturation and exposure if done early.
+Serena: Work on saturation and exposure, and its different levels.
+
+5/30
+Buffer day for debugging or finalizing any crucial parts of code for MVP. If everything is fine, start working on how to implement the harder manipulations such as denoising and leveling.
+
