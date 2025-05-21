@@ -51,16 +51,16 @@ Figure out together what the interface will look like and controls for each effe
 Also, find out how to load and export images from processing. 
 
 ### 5/26 - 5/27 ###
-Finish any work that was not finished from 5/22 - 5/25.
-Hugo: Add kernel class and its methods or any additional methods that are needed. 
+Finish any work that was not finished from 5/22 - 5/25.  
+Hugo: Add kernel class and its methods or any additional methods that are needed.  
 Serena: Start adding new kernels and modifying old kernels from our lab.
 
 ### 5/28 ###
-Hugo: Work on interface of editor and how different levels of manipulations will be achieved (ex. sliders or buttons).
+Hugo: Work on interface of editor and how different levels of manipulations will be achieved (ex. sliders or buttons).  
 Serena: Start working on blur and sharpen code, including modifying kernels.
 
 ### 5/29 ###
-Hugo: Work on cropping, and assist Serena with saturation and exposure if done early.
+Hugo: Work on cropping, and assist Serena with saturation and exposure if done early.  
 Serena: Work on saturation and exposure, and its different levels.
 
 ### 5/30 ###
