@@ -1,6 +1,5 @@
 # Group Details
 
-
 | Period | P5, APCS |
 | --- | --------- |
 | Group Members | Hugo Hu, Serena Chen |
@@ -41,6 +40,8 @@ We will modify our kernel lab for some
 # Project Design
 
 UML Diagrams and descriptions of key algorithms, classes, and how things fit together.
+
+![UML Diagram](/images/UMLClass.png)
 
 # Intended pacing
 
