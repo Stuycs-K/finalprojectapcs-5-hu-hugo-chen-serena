@@ -21,12 +21,14 @@ public class EditorWindow {
   }
 
   public EditorWindow() {
+    buttonList = new ArrayList<Button>();
+    
     spacing = 20;
 
     buttonW = 100;
     buttonH = 60;
     startX = WindowInfo.windowX - spacing - buttonW;
-    startX = WindowInfo.windowY - spacing - buttonH;
+    startY = 0 + spacing;
 
     int currentX = startX;
     int currentY = startY;
@@ -34,5 +36,9 @@ public class EditorWindow {
     Button loadButton = new LoadButton(currentX, currentY, buttonW, buttonH, "Load Image");
     currentY += buttonH + spacing;
     buttonList.add(loadButton);
+  }
+  
+  public ArrayList<Button> getButtons() {
+    return buttonList;
   }
 }

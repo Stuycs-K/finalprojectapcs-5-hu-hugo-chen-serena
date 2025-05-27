@@ -1,9 +1,9 @@
 public class Button {
-  private int xCor;
-  private int yCor;
-  private int bWidth;
-  private int bHeight;
-  private String text;
+  public int xCor;
+  public int yCor;
+  public int bWidth;
+  public int bHeight;
+  public String text;
   
   public Button(int x, int y, int w, int h, String t) {
     xCor = x;
