@@ -4,7 +4,7 @@ public class LoadButton extends Button {
   }
 
   public void applyFunction(EditorWindow window) {
-    selectInput("Select a file to process:", "fileSelected");
+    selectInput("Select a file to process:", "fileSelected", null, this);
   }
 
   private void fileSelected(File selection) {
