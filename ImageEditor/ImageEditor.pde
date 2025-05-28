@@ -41,16 +41,14 @@ void draw() {
   int imgWidth = 0;
   int imgHeight = 0;
 
-  if (windowRatio > imageRatio) {
+  if (windowRatio < imageRatio) {
     // w longer. clamp by x
     imgWidth = width*3/4;
     imgHeight = res[1] * imgWidth / res[0];
-  } else if (windowRatio < imageRatio) {
+  } else if (windowRatio > imageRatio) {
     // h longer. clamp by y.
     imgHeight = height * 3/4;
     imgWidth = res[0] * imgHeight/res[1];
-    
-    
   } else {
     imgHeight = height*3/4;
     imgWidth = imgHeight;
