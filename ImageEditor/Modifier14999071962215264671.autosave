@@ -1,0 +1,19 @@
+/*public class Modifier {
+  private String type;
+  private String[] names = {"Blur", "Sharpen", "Exposure", "Saturation", "Vignetting", "Denoise", "Leveling"};
+  
+  public Modifier {
+     type = "";
+  }
+  
+  public void applyManipulation(PImage src, String modify) {
+      type = modify;
+      //for loop to check for modifier, then call its respoective subclass
+  }
+  
+  //tracker moved to editor window class
+}*/
+    
+      
+  
+  

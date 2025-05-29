@@ -9,6 +9,8 @@ public class EditorWindow {
   private int startX;
   private int startY;
   private int spacing;
+  
+  private ArrayList<Modifier> modifiers;
 
 
   public EditorWindow() {
@@ -44,4 +46,13 @@ public class EditorWindow {
   public EditorImage getImage() {
     return outputImg;
   }
+  
+  public void addModifier(Modifier x) {
+     modifiers.add(x);
+  }
+  
+  public void removeModifier(Modifier x) {
+    modifiers.remove();
+  }
+  
 }
