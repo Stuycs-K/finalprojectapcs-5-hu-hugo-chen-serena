@@ -4,7 +4,6 @@ public class SharpenButton extends Button {
   }
 
   public void applyFunction(EditorWindow window) {
-    println("pressed");
     // apply kernel here
     //Modifications.applyModification(window.getImage(), "sharpen");
     PImage newImg = window.getImage().getImage().copy();

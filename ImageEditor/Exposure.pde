@@ -1,7 +1,8 @@
 public class Exposure {
+  PImage destination;
   
-  public applyExposure(PImage src, PImage output) {
-    
+  public applyExposure(PImage src, PImage output, float factor) {
+    apply(src, output, factor);
   }
   
   public color changeExposure(PImage img, int x, int y, float factor) {

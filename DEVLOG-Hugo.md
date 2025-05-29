@@ -4,6 +4,11 @@ This document must be updated daily every time you finish a work session.
 
 ## Hugo Hu
 
+### 2025-05-29 - Wrote part of Modifier class. Button child class ModifyButton
+
+Slightly change way things are designed (using multiple class instances, instead of several subclasses)
+~ 30m
+
 ### 2025-05-28 - Added a button + sharpening validation
 
 Added SharpenButton. Added a class for kernels to test the button. Rewrote the
