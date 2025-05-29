@@ -1,7 +1,7 @@
 public class EditorWindow {
   private ArrayList<Button> buttonList;
-  private PImage srcImg;
-  private PImage outputImg;
+  private EditorImage srcImg;
+  private EditorImage outputImg;
   private String srcPath;
 
   private int buttonW;
@@ -11,16 +11,10 @@ public class EditorWindow {
   private int spacing;
 
 
-  public void updateSrcImg(String path) {
-    try {
-      srcImg = loadImage(path);
-    }
-    catch (Exception e) {
-      // error handling here
-    }
-  }
-
   public EditorWindow() {
+    srcImg = new EditorImage();
+    outputImg = new EditorImage();
+    
     buttonList = new ArrayList<Button>();
     
     spacing = 20;
@@ -33,12 +27,21 @@ public class EditorWindow {
     int currentX = startX;
     int currentY = startY;
 
-    Button loadButton = new LoadButton(currentX, currentY, buttonW, buttonH, "Load Image");
+    Button sharpenButton = new SharpenButton(currentX, currentY, buttonW, buttonH, "Sharpen");
     currentY += buttonH + spacing;
-    buttonList.add(loadButton);
+    buttonList.add(sharpenButton);
+  }
+  
+  public void updateImage(String path) {
+    srcImg.updatePath(path);
+    outputImg.updatePath(path);
   }
   
   public ArrayList<Button> getButtons() {
     return buttonList;
+  }
+  
+  public EditorImage getImage() {
+    return outputImg;
   }
 }
