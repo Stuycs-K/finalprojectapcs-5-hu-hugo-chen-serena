@@ -24,7 +24,7 @@ public class ApplyModKernel {
   //  text("Kernel: " + names[currentKernel], 15, 15);
   //}
 
-  public ApplyModKernel(PImage src, PImage output) {
+  public ApplyModKernel(PImage src, PImage output, int opt) {
     currentKernel = 0;
     //Kernel k = new Kernel( new float[][] {
     //  {-1, -1, -1},
@@ -49,52 +49,56 @@ public class ApplyModKernel {
       "Top Sobel", "Emboss"
     };
 
-    kernels = new Kernel[] {
-      new Kernel( new float[][] {
-        {0, 0, 0},
-        {0, 1, 0},
-        {0, 0, 0}
-      }),
-      new Kernel( new float[][] {
-        {.111, .111, .111},
-        {.111, .111, .111},
-        {.111, .111, .111}
-      }),
-      new Kernel( new float[][] {
-        {0, -1, 0},
-        {-1, 5, -1},
-        {0, -1, 0}
-      }),
-      new Kernel( new float[][] {
-        {-1, -1, -1},
-        {-1, 8, -1},
-        {-1, -1, -1}
-      }),
-      new Kernel( new float[][] {
-        {1, 0, -1},
-        {2, 0, -2},
-        {1, 0, -1}
-      }),
-      new Kernel( new float[][] {
-        {-1, 0, 1},
-        {-2, 0, 2},
-        {-1, 0, 1}
-      }),
-      new Kernel( new float[][] {
-        {1, 2, 1},
-        {0, 0, 0},
-        {-1, -2, -1}
-      }),
-      new Kernel( new float[][] {
-        {-2, -1, 0},
-        {-1, 1, 1},
-        {0, 1, 2}
-      })
-    };
+    if (opt >= names.length) {
+    } else {
 
-    apply(src, output, kernels[2].kernel);
-    //fill(0);
-    //text("Kernel: " + names[currentKernel], 15, 15);
+      kernels = new Kernel[] {
+        new Kernel( new float[][] {
+          {0, 0, 0},
+          {0, 1, 0},
+          {0, 0, 0}
+        }),
+        new Kernel( new float[][] {
+          {.111, .111, .111},
+          {.111, .111, .111},
+          {.111, .111, .111}
+        }),
+        new Kernel( new float[][] {
+          {0, -1, 0},
+          {-1, 5, -1},
+          {0, -1, 0}
+        }),
+        new Kernel( new float[][] {
+          {-1, -1, -1},
+          {-1, 8, -1},
+          {-1, -1, -1}
+        }),
+        new Kernel( new float[][] {
+          {1, 0, -1},
+          {2, 0, -2},
+          {1, 0, -1}
+        }),
+        new Kernel( new float[][] {
+          {-1, 0, 1},
+          {-2, 0, 2},
+          {-1, 0, 1}
+        }),
+        new Kernel( new float[][] {
+          {1, 2, 1},
+          {0, 0, 0},
+          {-1, -2, -1}
+        }),
+        new Kernel( new float[][] {
+          {-2, -1, 0},
+          {-1, 1, 1},
+          {0, 1, 2}
+        })
+      };
+
+      apply(src, output, kernels[opt].kernel);
+      //fill(0);
+      //text("Kernel: " + names[currentKernel], 15, 15);
+    }
   }
 
   color calcNewColor(PImage img, int x, int y, float[][] kernel) {
