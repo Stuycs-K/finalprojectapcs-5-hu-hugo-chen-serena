@@ -1,5 +1,5 @@
 public class EditorImage {
-  public PImage image;
+  private PImage image;
   private String filePath;
   
   public EditorImage() {
@@ -23,6 +23,14 @@ public class EditorImage {
   public float getRatio () {
     // return x/y
     return ((float)image.width)/image.height;
+  }
+  
+  public PImage getImage() {
+    return image;
+  }
+  
+  public void updateImage(PImage newImg) {
+    image = newImg;
   }
   
 }

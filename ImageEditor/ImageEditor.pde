@@ -35,8 +35,10 @@ void draw() {
 
   // resize image to no more than 75% width OR 75% height
   float windowRatio = width / height;
-  float imageRatio = window.srcImg.getRatio();
-  int[] res = window.srcImg.getResolution();
+  EditorImage currentImg = window.getImage();
+  
+  float imageRatio = currentImg.getRatio();
+  int[] res = currentImg.getResolution();
 
   int imgWidth = 0;
   int imgHeight = 0;
@@ -54,7 +56,7 @@ void draw() {
     imgWidth = imgHeight;
   }
 
-  image(window.srcImg.image, 0, 0, imgWidth, imgHeight);
+  image(currentImg.getImage(), 0, 0, imgWidth, imgHeight);
 }
 
 void mouseClicked() {
