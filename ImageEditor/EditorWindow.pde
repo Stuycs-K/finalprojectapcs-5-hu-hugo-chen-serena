@@ -1,6 +1,6 @@
 public class EditorWindow {
   private ArrayList<Button> buttonList;
-  public EditorImage srcImg;
+  private EditorImage srcImg;
   private EditorImage outputImg;
   private String srcPath;
 
@@ -13,6 +13,7 @@ public class EditorWindow {
 
   public EditorWindow() {
     srcImg = new EditorImage();
+    outputImg = new EditorImage();
     
     buttonList = new ArrayList<Button>();
     
@@ -26,16 +27,21 @@ public class EditorWindow {
     int currentX = startX;
     int currentY = startY;
 
-    //Button loadButton = new LoadButton(currentX, currentY, buttonW, buttonH, "Load Image");
-    //currentY += buttonH + spacing;
-    //buttonList.add(loadButton);
+    Button sharpenButton = new SharpenButton(currentX, currentY, buttonW, buttonH, "Sharpen");
+    currentY += buttonH + spacing;
+    buttonList.add(sharpenButton);
   }
   
   public void updateImage(String path) {
     srcImg.updatePath(path);
+    outputImg.updatePath(path);
   }
   
   public ArrayList<Button> getButtons() {
     return buttonList;
+  }
+  
+  public EditorImage getImage() {
+    return outputImg;
   }
 }
