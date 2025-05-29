@@ -29,6 +29,15 @@ public class Exposure {
     }
   }
   
+   public void apply(PImage source, PImage destination, float factor) {
+    //System.out.println("apply");
+    for (int r = 0; r < source.width; r++) {
+      for (int c = 0; c < source.height; c++) {
+        //destination.get(r, c) = calcNewColor(source, r, c);
+        destination.set(r, c, changeExposure(source, r, c, factor));
+      }
+    }
+  
 
   }
   

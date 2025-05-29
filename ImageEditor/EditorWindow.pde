@@ -47,6 +47,10 @@ public class EditorWindow {
     return outputImg;
   }
   
+  public PImage getPImage() {
+    return outputImg.getImage();
+  }
+  
   public void addModifier(Modifier x) {
      modifiers.add(x);
   }
