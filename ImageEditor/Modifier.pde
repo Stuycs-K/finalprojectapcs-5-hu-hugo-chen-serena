@@ -20,12 +20,19 @@ public class Modifier {
         new ApplyModKernel(src, newImg, 1);
         
         level++;
-      } else if (type.equals("Sharpen")) {
+      } 
+      else if (type.equals("Sharpen")) {
         PImage newImg = src.copy();
         new ApplyModKernel(src, newImg, 2);
         
         level++;
       }
+      else if (type.equals("Exposure")) {
+        PImage newImg = src.copy();
+        new applyExposure(src, newImg, 1.5);
+        level++;
+      }
+        
   }
   
   //tracker moved to editor window class

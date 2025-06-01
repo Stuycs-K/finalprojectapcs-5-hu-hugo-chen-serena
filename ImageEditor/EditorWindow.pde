@@ -32,6 +32,10 @@ public class EditorWindow {
     Button sharpenButton = new SharpenButton(currentX, currentY, buttonW, buttonH, "Sharpen");
     currentY += buttonH + spacing;
     buttonList.add(sharpenButton);
+    
+    Button saveButton = new SaveButton(currentX, currentY, buttonW, buttonH, "Save");
+    currentY += buttonH + spacing;
+    buttonList.add(saveButton);
   }
   
   public void updateImage(String path) {
@@ -56,7 +60,7 @@ public class EditorWindow {
   }
   
   public void removeModifier(Modifier x) {
-    modifiers.remove();
+    modifiers.remove(modifiers.size() - 1);
   }
   
 }
