@@ -4,6 +4,10 @@ This document must be updated daily every time you finish a work session.
 
 ## Hugo Hu
 
+### 2025-05-30 - Save works
+
+Added a save button class, save button, and implemented saving to original folder
+
 ### 2025-05-29 - Wrote part of Modifier class. Button child class ModifyButton
 
 Slightly change way things are designed (using multiple class instances, instead of several subclasses)

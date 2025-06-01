@@ -7,7 +7,7 @@ public class SharpenButton extends Button {
     // apply kernel here
     //Modifications.applyModification(window.getImage(), "sharpen");
     PImage newImg = window.getImage().getImage().copy();
-    new ApplyModKernel(window.getImage().getImage(), newImg);
+    new ApplyModKernel(window.getImage().getImage(), newImg, 2);
     window.getImage().updateImage(newImg);
     // add kernel to list
     //
