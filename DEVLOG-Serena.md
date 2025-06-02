@@ -26,4 +26,5 @@ This document must be updated daily every time you finish a work session.
 5/30
 - started Saturation class (change Saturation, applySaturation, constructor) (41 mins)
 
-5/31
+6/1
+- debugged exposure class, working with temporary testing (30 mins)
