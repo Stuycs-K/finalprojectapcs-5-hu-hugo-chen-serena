@@ -11,30 +11,31 @@ public class Modifier {
      
   }
   
-  public void applyManipulation(PImage src, String modify) {
+  public void applyManipulation(PImage src, PImage newImg, String modify) {
       type = modify;
       //for loop to check for modifier, then call its respoective subclass
-      
       if (type.equals("Blur")) {
-        PImage newImg = src.copy();
         new ApplyModKernel(src, newImg, 1);
-        
         level++;
       } 
       else if (type.equals("Sharpen")) {
-        PImage newImg = src.copy();
         new ApplyModKernel(src, newImg, 2);
-        
         level++;
       }
       else if (type.equals("Exposure")) {
-        PImage newImg = src.copy();
         new Exposure(src, newImg, 1.5);
         level++;
       }
       else if(type.equals("Saturation")) {
-        PImage newImg = src.copy();
-        new Exposure(src, newImg, 1.5);
+        new Saturation(src, newImg, 1.5);
+        level++;
+      }
+      else if(type.equals("Vignetting")) {
+        new Vignetting(src, newImg);
+        level++;
+      }
+      else if(type.equals("Moireing")) {
+        new Moireing(src, newImg);
         level++;
       }
         

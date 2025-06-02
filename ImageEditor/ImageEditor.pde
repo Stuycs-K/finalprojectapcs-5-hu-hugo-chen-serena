@@ -7,7 +7,7 @@ void setup() {
 
   selectInput("Select a file to process:", "fileSelected");
 
-  frameRate(1);
+  frameRate(.25);
 }
 
 void fileSelected(File selection) {
@@ -20,7 +20,7 @@ void fileSelected(File selection) {
 }
 
 void draw() {
-  background(128);
+  //background(128);
 
   // draw buttons
   ArrayList<Button> buttonList = window.getButtons();
