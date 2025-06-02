@@ -18,7 +18,7 @@ After 1.5 weeks, we will have at least the following in our MVP:
 
 - Load / Save images into processing
 - Basic image manipulations (integrating some of our kernels used in a lab)
-- Image manipulations including: saturation, exposure, cropping, sharpening, blur
+- Image manipulations including: saturation, exposure, ~cropping~, sharpening, blur
 - Real time preview of manipulated image
 - Some implementation of denoise, vignetting and levelling
 
