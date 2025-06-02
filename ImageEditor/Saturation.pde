@@ -6,10 +6,11 @@ public class Saturation {
   }
   
   public color changeSaturation(PImage img, int x, int y, float factor) {
-
-    float h = hue(original);
-    float s = saturation(original) * factor;
-    float b = brightness(original);
+  
+    color c = img.get(x,y);
+    float h = hue(c);
+    float s = saturation(c) * factor;
+    float b = brightness(c);
 
     s = constrain(s, 0, 100); 
 
@@ -28,4 +29,5 @@ public class Saturation {
     
     colorMode(RGB, 255); 
   }
+}
   
