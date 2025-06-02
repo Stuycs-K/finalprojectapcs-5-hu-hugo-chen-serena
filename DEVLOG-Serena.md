@@ -19,7 +19,8 @@ This document must be updated daily every time you finish a work session.
 - added PImage method to Editor window (30 mins total)
 
 5/29
-- started Exposure class including applyExposure and changeExposure (41 mins)
+- started Exposure class including applyExposure and changeExposure 
+- added exposure to modifier class (41 mins)
 - debugged exposure class, tried to get working with button class but still a little bugged(30 mins)
 
 5/30
