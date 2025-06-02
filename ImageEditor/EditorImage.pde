@@ -3,12 +3,15 @@ public class EditorImage {
   private String filePath;
   
   public EditorImage() {
-      image = loadImage("./samples/test.jpeg");
+    filePath = "./samples/test.jpeg";
+      image = loadImage(filePath);
+      image.resize(1080, 0);
   }
   
   public void updatePath (String path) {
     try {
       image = loadImage(path);
+      image.resize(1080, 0);
       filePath = path;
     }
     catch (Exception e) {
@@ -30,6 +33,7 @@ public class EditorImage {
   }
   
   public void updateImage(PImage newImg) {
+    //newImg.resize(800, 0);
     image = newImg;
   }
   

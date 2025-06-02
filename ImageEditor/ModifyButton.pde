@@ -6,6 +6,7 @@ public class ModifyButton extends Button {
   }
   
   public void applyFunction(EditorWindow window) {
+    println("Pressed " + type);
     Modifier newMod = new Modifier(type);
     //window.addModifier(newMod);
     PImage newImg = window.getImage().getImage().copy();
