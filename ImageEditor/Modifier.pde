@@ -32,6 +32,11 @@ public class Modifier {
         new Exposure(src, newImg, 1.5);
         level++;
       }
+      else if(type.equals("Saturation")) {
+        PImage newImg = src.copy();
+        new Exposure(src, newImg, 1.5);
+        level++;
+      }
         
   }
   
