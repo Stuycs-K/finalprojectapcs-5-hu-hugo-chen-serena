@@ -34,6 +34,7 @@ public class EditorImage {
   }
   
   public void saveFile() {
+    background(128);
     // saves PImage as fileName+PROCESSING....
     int i = filePath.lastIndexOf("."); 
     String[] a =  {filePath.substring(0, i), filePath.substring(i)};
@@ -42,6 +43,9 @@ public class EditorImage {
     println(filePath);
     println(newPath);
     image.save(newPath);
+    println("Saved to " + newPath);
+    textAlign(LEFT, LEFT);
+    text("Saved to " + newPath, 10, height-10);
   }
   
 }

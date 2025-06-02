@@ -4,6 +4,15 @@ This document must be updated daily every time you finish a work session.
 
 ## Hugo Hu
 
+### 2025-06-01 - Added Moire Feature. Save button text update
+
+While trying to implement a vignetting feature, I inadvertently created a _moire_ function instead of
+a vignetting function. Anyway, our program now has the ability to create moire in an image. Also, when
+you save the image, it will now print the location of the save location. It will also wipe the screen, show
+the text, and then re-display the top components.
+
+~ 2 hours
+
 ### 2025-05-30 - Save works
 
 Added a save button class, save button, and implemented saving to original folder
@@ -28,7 +37,7 @@ proportionately to fit. Tested sharpening. Works, but can be applied more than o
 Removed LoadButton. Load implemented on startup: program will prompt user for a file. Load will NOT be
 implemented during runtime.
 Added a starter cat file to prevent things from breaking. (null ptr)
-Attempted a resize algorithm to fit previews on screen. *VERTICAL NEEDS WORK*
+Attempted a resize algorithm to fit previews on screen. _VERTICAL NEEDS WORK_
 ~ 1h
 
 ### 2025-05-26 - Added basic classes for photo editor (NOT DONE ON BRANCH)
@@ -37,7 +46,7 @@ Had an oopsie, this work was done on the main branch, not hugohu.
 
 Wrote Button template class and LoadButton child class. Setup hierarchy for display:
 ImageEditor -> EditorWindow -> ...
-Implemented button *displays* (non-functional) in the draw() for ImageEditor.
+Implemented button _displays_ (non-functional) in the draw() for ImageEditor.
 ~ 1h
 
 ### 2025-05-23 - Updated UML with suggestions

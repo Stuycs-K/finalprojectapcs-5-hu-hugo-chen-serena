@@ -33,6 +33,10 @@ public class EditorWindow {
     currentY += buttonH + spacing;
     buttonList.add(sharpenButton);
     
+    Button moireButton = new ModifyButton(currentX, currentY, buttonW, buttonH, "Moireing", "Moireing");
+    currentY += buttonH + spacing;
+    buttonList.add(moireButton);
+    
     Button saveButton = new SaveButton(currentX, currentY, buttonW, buttonH, "Save");
     currentY += buttonH + spacing;
     buttonList.add(saveButton);

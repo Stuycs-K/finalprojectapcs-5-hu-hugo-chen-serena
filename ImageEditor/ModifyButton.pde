@@ -7,8 +7,10 @@ public class ModifyButton extends Button {
   
   public void applyFunction(EditorWindow window) {
     Modifier newMod = new Modifier(type);
-    window.addModifier(newMod);
-    newMod.applyManipulation(window.getPImage(), type);
+    //window.addModifier(newMod);
+    PImage newImg = window.getImage().getImage().copy();
+    newMod.applyManipulation(window.getImage().getImage(), newImg, type);
+    window.getImage().updateImage(newImg);
   }
   
 }
