@@ -28,3 +28,5 @@ This document must be updated daily every time you finish a work session.
 
 6/1
 - debugged exposure class, working with temporary testing (30 mins)
+- debugged saturation class, is working 
+- deleted applyKernel and added saturation to modifier (30 mins)
