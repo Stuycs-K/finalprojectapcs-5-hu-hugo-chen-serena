@@ -7,7 +7,7 @@ void setup() {
 
   selectInput("Select a file to process:", "fileSelected");
 
-  frameRate(.25);
+  //frameRate(.25);
 }
 
 void fileSelected(File selection) {
@@ -16,6 +16,7 @@ void fileSelected(File selection) {
   } else {
     println("User selected " + selection.getAbsolutePath());
     window.updateImage(selection.getAbsolutePath());
+    background(128);
   }
 }
 
