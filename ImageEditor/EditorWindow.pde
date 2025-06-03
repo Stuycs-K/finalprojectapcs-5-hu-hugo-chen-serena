@@ -3,6 +3,7 @@ public class EditorWindow {
   private EditorImage srcImg;
   private EditorImage outputImg;
   private String srcPath;
+  public String saveData;
 
   private int buttonW;
   private int buttonH;
@@ -18,6 +19,8 @@ public class EditorWindow {
     outputImg = new EditorImage();
     
     buttonList = new ArrayList<Button>();
+    
+    saveData = "";
     
     spacing = 20;
 

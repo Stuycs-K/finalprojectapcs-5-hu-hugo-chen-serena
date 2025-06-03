@@ -21,7 +21,7 @@ void fileSelected(File selection) {
 }
 
 void draw() {
-  //background(128);
+  background(128);
 
   // draw buttons
   ArrayList<Button> buttonList = window.getButtons();
@@ -58,6 +58,8 @@ void draw() {
   }
 
   image(currentImg.getImage(), 0, 0, imgWidth, imgHeight);
+  
+  text(window.saveData, 10, height-10);
 }
 
 void mouseClicked() {
