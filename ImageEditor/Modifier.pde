@@ -22,12 +22,20 @@ public class Modifier {
         new ApplyModKernel(src, newImg, 2);
         level++;
       }
-      else if (type.equals("Exposure")) {
+      else if (type.equals("+ Exposure")) {
         new Exposure(src, newImg, 1.5);
         level++;
       }
-      else if(type.equals("Saturation")) {
+      else if (type.equals("- Exposure")) {
+        new Exposure(src, newImg, 0.75);
+        level++;
+      }
+      else if(type.equals("+ Saturation")) {
         new Saturation(src, newImg, 1.5);
+        level++;
+      }
+      else if(type.equals("- Saturation")) {
+        new Saturation(src, newImg, 0.5);
         level++;
       }
       else if(type.equals("Vignetting")) {
@@ -36,6 +44,14 @@ public class Modifier {
       }
       else if(type.equals("Moireing")) {
         new Moireing(src, newImg);
+        level++;
+      }
+      else if(type.equals("Tint")) {
+        new Tint(src, newImg, "Blue");
+        level++;
+      }
+      else if(type.equals("Filter")) {
+        new Filters(src, newImg);
         level++;
       }
         
