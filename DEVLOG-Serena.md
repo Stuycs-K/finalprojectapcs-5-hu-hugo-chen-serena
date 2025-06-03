@@ -31,3 +31,8 @@ This document must be updated daily every time you finish a work session.
 - debugged saturation class, is working 
 - deleted applyKernel and added saturation to modifier 
 - added buttons for all features (1 hour)
+
+6/2
+- Deleted sharpenButton, looked into implementation of filter() and tint()
+- Tried experimenting with a new tint() class, sort of working but doesn't save when you export the image because the tint() function doesn't direcly modify pixel data
+- Added button for tint in new column for testing purposes (1 hr)
