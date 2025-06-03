@@ -46,6 +46,10 @@ public class Modifier {
         new Moireing(src, newImg);
         level++;
       }
+      else if(type.equals("Tint")) {
+        new Tint(src, newImg, "Blue");
+        level++;
+      }
         
   }
   

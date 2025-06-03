@@ -34,7 +34,7 @@ public class EditorWindow {
     Button blurButton = new ModifyButton(currentX, currentY, buttonW, buttonH, "Blur", "Blur");
     currentY += buttonH + spacing;
     buttonList.add(blurButton);
-
+    
     Button sharpenButton = new ModifyButton(currentX, currentY, buttonW, buttonH, "Sharpen", "Sharpen");
     currentY += buttonH + spacing;
     buttonList.add(sharpenButton);
@@ -62,6 +62,16 @@ public class EditorWindow {
     Button saveButton = new SaveButton(currentX, currentY, buttonW, buttonH, "Save");
     currentY += buttonH + spacing;
     buttonList.add(saveButton);
+    
+    //new column
+    
+    currentX = WindowInfo.windowX - 2 * spacing - 2 * buttonW;
+    currentY = 0 + spacing;
+    
+    Button tintButton = new ModifyButton(currentX, currentY, buttonW, buttonH, "Tint", "Tint");
+    currentY= buttonH + spacing;
+    buttonList.add(tintButton);
+
   }
   
   public void updateImage(String path) {
