@@ -34,18 +34,26 @@ public class EditorWindow {
     Button blurButton = new ModifyButton(currentX, currentY, buttonW, buttonH, "Blur", "Blur");
     currentY += buttonH + spacing;
     buttonList.add(blurButton);
-
+    
     Button sharpenButton = new ModifyButton(currentX, currentY, buttonW, buttonH, "Sharpen", "Sharpen");
     currentY += buttonH + spacing;
     buttonList.add(sharpenButton);
     
-    Button exposureButton = new ModifyButton(currentX, currentY, buttonW, buttonH, "Exposure", "Exposure");
+    Button exposureButtonP = new ModifyButton(currentX, currentY, buttonW, buttonH, "+ Exposure", "+ Exposure");
     currentY += buttonH + spacing;
-    buttonList.add(exposureButton);
+    buttonList.add(exposureButtonP);
     
-    Button saturationButton = new ModifyButton(currentX, currentY, buttonW, buttonH, "Saturation", "Saturation");
+    Button exposureButtonN = new ModifyButton(currentX, currentY, buttonW, buttonH, "- Exposure", "- Exposure");
     currentY += buttonH + spacing;
-    buttonList.add(saturationButton);
+    buttonList.add(exposureButtonN);
+    
+    Button saturationButtonP = new ModifyButton(currentX, currentY, buttonW, buttonH, "+ Saturation", "+ Saturation");
+    currentY += buttonH + spacing;
+    buttonList.add(saturationButtonP);
+    
+    Button saturationButtonN = new ModifyButton(currentX, currentY, buttonW, buttonH, "- Saturation", "- Saturation");
+    currentY += buttonH + spacing;
+    buttonList.add(saturationButtonN);
     
     Button moireButton = new ModifyButton(currentX, currentY, buttonW, buttonH, "Moireing", "Moireing");
     currentY += buttonH + spacing;
@@ -54,6 +62,20 @@ public class EditorWindow {
     Button saveButton = new SaveButton(currentX, currentY, buttonW, buttonH, "Save");
     currentY += buttonH + spacing;
     buttonList.add(saveButton);
+    
+    //new column
+    
+    currentX = WindowInfo.windowX - 2 * spacing - 2 * buttonW;
+    currentY = 0 + spacing;
+    
+    Button tintButton = new ModifyButton(currentX, currentY, buttonW, buttonH, "Tint", "Tint");
+    currentY += buttonH + spacing;
+    buttonList.add(tintButton);
+    
+    /*Button filtersButton = new ModifyButton(currentX, currentY, buttonW, buttonH, "Filter", "Filter");
+    currentY += buttonH + spacing;
+    buttonList.add(filtersButton);*/
+
   }
   
   public void updateImage(String path) {

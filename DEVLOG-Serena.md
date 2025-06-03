@@ -16,7 +16,7 @@ This document must be updated daily every time you finish a work session.
 
 5/28
 - Added tracker to Editor Window
-- added PImage method to Editor window (30 mins total)
+- added PImage method to Editor window (15 mins)
 
 5/29
 - started Exposure class including applyExposure and changeExposure 
@@ -31,3 +31,9 @@ This document must be updated daily every time you finish a work session.
 - debugged saturation class, is working 
 - deleted applyKernel and added saturation to modifier 
 - added buttons for all features (1 hour)
+
+6/2
+- Deleted sharpenButton, looked into implementation of filter() and tint()
+- Tried experimenting with a new tint() class, sort of working but doesn't save when you export the image because the tint() function doesn't direcly modify pixel data
+- Added button for tint in new column for testing purposes, is semi-working
+- Also experimented with filter(), mainly invert, but is broken so button is commented out, will try to fix issue tmr(1.5hr)
