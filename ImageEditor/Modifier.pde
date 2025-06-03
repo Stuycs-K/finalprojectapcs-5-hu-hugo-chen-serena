@@ -50,6 +50,10 @@ public class Modifier {
         new Tint(src, newImg, "Blue");
         level++;
       }
+      else if(type.equals("Filter")) {
+        new Filters(src, newImg);
+        level++;
+      }
         
   }
   

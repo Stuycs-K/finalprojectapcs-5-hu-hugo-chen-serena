@@ -1,12 +1,12 @@
 public class Filters {
   PImage destination;
   
-  public Filters(PImage src, PImage output, String colour) {
-    apply(src, output, colour);
+  public Filters(PImage src, PImage output) {
+    apply(src, output);
   }
  
    //tint doesnt update pixel data directly, maybe thats why it doesnt save when exporting images directly
-   public void apply(PImage source, PImage destination, String colour) {
+   public void apply(PImage source, PImage destination) {
     //System.out.println("apply");
     image(source, 0, 0);
     filter(INVERT);
