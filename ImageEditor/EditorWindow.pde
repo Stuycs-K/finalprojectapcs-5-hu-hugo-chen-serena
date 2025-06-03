@@ -72,9 +72,9 @@ public class EditorWindow {
     currentY += buttonH + spacing;
     buttonList.add(tintButton);
     
-    /*Button filtersButton = new ModifyButton(currentX, currentY, buttonW, buttonH, "Filter", "Filter");
+    Button filtersButton = new ModifyButton(currentX, currentY, buttonW, buttonH, "Filter", "Filter");
     currentY += buttonH + spacing;
-    buttonList.add(filtersButton);*/
+    buttonList.add(filtersButton);
 
   }
   

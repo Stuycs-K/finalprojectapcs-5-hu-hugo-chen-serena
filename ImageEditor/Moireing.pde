@@ -69,7 +69,7 @@ public class Moireing {
     float s = saturation(c);
     float b = brightness(c) / factor;
 
-    s = constrain(b, 0, 100); 
+    b = constrain(b, 0, 100); 
 
     return color(h, s, b);
   }
