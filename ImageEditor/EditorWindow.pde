@@ -39,13 +39,21 @@ public class EditorWindow {
     currentY += buttonH + spacing;
     buttonList.add(sharpenButton);
     
-    Button exposureButton = new ModifyButton(currentX, currentY, buttonW, buttonH, "Exposure", "Exposure");
+    Button exposureButtonP = new ModifyButton(currentX, currentY, buttonW, buttonH, "+ Exposure", "+ Exposure");
     currentY += buttonH + spacing;
-    buttonList.add(exposureButton);
+    buttonList.add(exposureButtonP);
     
-    Button saturationButton = new ModifyButton(currentX, currentY, buttonW, buttonH, "Saturation", "Saturation");
+    Button exposureButtonN = new ModifyButton(currentX, currentY, buttonW, buttonH, "- Exposure", "- Exposure");
     currentY += buttonH + spacing;
-    buttonList.add(saturationButton);
+    buttonList.add(exposureButtonN);
+    
+    Button saturationButtonP = new ModifyButton(currentX, currentY, buttonW, buttonH, "+ Saturation", "+ Saturation");
+    currentY += buttonH + spacing;
+    buttonList.add(saturationButtonP);
+    
+    Button saturationButtonN = new ModifyButton(currentX, currentY, buttonW, buttonH, "- Saturation", "- Saturation");
+    currentY += buttonH + spacing;
+    buttonList.add(saturationButtonN);
     
     Button moireButton = new ModifyButton(currentX, currentY, buttonW, buttonH, "Moireing", "Moireing");
     currentY += buttonH + spacing;

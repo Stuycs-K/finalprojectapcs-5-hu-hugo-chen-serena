@@ -22,12 +22,20 @@ public class Modifier {
         new ApplyModKernel(src, newImg, 2);
         level++;
       }
-      else if (type.equals("Exposure")) {
+      else if (type.equals("+ Exposure")) {
         new Exposure(src, newImg, 1.5);
         level++;
       }
-      else if(type.equals("Saturation")) {
+      else if (type.equals("- Exposure")) {
+        new Exposure(src, newImg, 0.75);
+        level++;
+      }
+      else if(type.equals("+ Saturation")) {
         new Saturation(src, newImg, 1.5);
+        level++;
+      }
+      else if(type.equals("- Saturation")) {
+        new Saturation(src, newImg, 0.5);
         level++;
       }
       else if(type.equals("Vignetting")) {
