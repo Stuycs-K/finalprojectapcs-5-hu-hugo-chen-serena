@@ -4,7 +4,7 @@ public class SaveButton extends Button {
   }
   
   public void applyFunction(EditorWindow window) {
-    window.getImage().saveFile();
+    window.getImage().saveFile(window);
   }
   
 }

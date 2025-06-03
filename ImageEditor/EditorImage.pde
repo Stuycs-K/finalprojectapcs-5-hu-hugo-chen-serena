@@ -37,19 +37,16 @@ public class EditorImage {
     image = newImg;
   }
   
-  public void saveFile() {
-    background(128);
+  public void saveFile(EditorWindow window) {
     // saves PImage as fileName+PROCESSING....
     int i = filePath.lastIndexOf("."); 
     String[] a =  {filePath.substring(0, i), filePath.substring(i)};
     
     String newPath = a[0] + "_PROCESSING" + a[1];
-    println(filePath);
-    println(newPath);
     image.save(newPath);
-    println("Saved to " + newPath);
-    textAlign(LEFT, LEFT);
-    text("Saved to " + newPath, 10, height-10);
+    
+    window.saveData = "Saved to " + newPath;
+
   }
   
 }
