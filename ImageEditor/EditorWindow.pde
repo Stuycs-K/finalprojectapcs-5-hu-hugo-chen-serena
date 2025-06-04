@@ -11,7 +11,7 @@ public class EditorWindow {
   private int startY;
   private int spacing;
   
-  private ArrayList<Modifier> modifiers;
+  public ArrayList<Modifier> modifiers;
 
 
   public EditorWindow() {
@@ -19,6 +19,7 @@ public class EditorWindow {
     outputImg = new EditorImage();
     
     buttonList = new ArrayList<Button>();
+    modifiers = new ArrayList<Modifier>();
     
     saveData = "";
     
@@ -66,6 +67,7 @@ public class EditorWindow {
     currentY += buttonH + spacing;
     buttonList.add(saveButton);
     
+    
     //new column
     
     currentX = WindowInfo.windowX - 2 * spacing - 2 * buttonW;
@@ -75,9 +77,17 @@ public class EditorWindow {
     currentY += buttonH + spacing;
     buttonList.add(tintButton);
     
-    /*Button filtersButton = new ModifyButton(currentX, currentY, buttonW, buttonH, "Filter", "Filter");
+    Button filtersButton = new ModifyButton(currentX, currentY, buttonW, buttonH, "Filter", "Filter");
     currentY += buttonH + spacing;
-    buttonList.add(filtersButton);*/
+    buttonList.add(filtersButton);
+    
+    Button undoButton = new ModifyButton(currentX, currentY, buttonW, buttonH, "Undo", "Undo");
+    currentY += buttonH + spacing;
+    buttonList.add(undoButton);
+    
+    Button resetButton = new ModifyButton(currentX, currentY, buttonW, buttonH, "Reset", "Reset");
+    currentY += buttonH + spacing;
+    buttonList.add(resetButton);
 
   }
   
@@ -88,6 +98,10 @@ public class EditorWindow {
   
   public ArrayList<Button> getButtons() {
     return buttonList;
+  }
+   
+  public EditorImage getSrcImage() {
+    return srcImg;
   }
   
   public EditorImage getImage() {
@@ -102,7 +116,7 @@ public class EditorWindow {
      modifiers.add(x);
   }
   
-  public void removeModifier(Modifier x) {
+  public void removeModifier() {
     modifiers.remove(modifiers.size() - 1);
   }
   

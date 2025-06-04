@@ -1,9 +1,9 @@
 public class Modifier {
-  private String type;
+  public String type;
   private String[] names = {"Blur", "Sharpen", "Exposure", "Saturation", "Vignetting", "Denoise", "Leveling"};
   
   // keep a "%" in case needed or other value to be used
-  private int level;
+  public int level;
   
   public Modifier (String type) {
      this.type = type;
@@ -55,6 +55,28 @@ public class Modifier {
         level++;
       }
         
+  }
+  
+  public void applyManipulation(PImage src, PImage newImg, String modify, float factor) {
+      type = modify;
+      //for loop to check for modifier, then call its respoective subclass
+      if (type.equals("+ Exposure")) {
+        new Exposure(src, newImg, factor);
+        level++;
+      }
+      else if (type.equals("- Exposure")) {
+        new Exposure(src, newImg, factor);
+        level++;
+      }
+      else if(type.equals("+ Saturation")) {
+        new Saturation(src, newImg, factor);
+        level++;
+      }
+      else if(type.equals("- Saturation")) {
+        new Saturation(src, newImg, factor);
+        level++;
+      }
+      
   }
   
   //tracker moved to editor window class 

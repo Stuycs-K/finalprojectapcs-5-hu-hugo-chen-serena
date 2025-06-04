@@ -2,7 +2,6 @@ public class Moireing {
   PImage destination;
 
   public Moireing(PImage src, PImage output) {
-    println("Pressed");
     apply(src, output);
   }
 
@@ -69,7 +68,7 @@ public class Moireing {
     float s = saturation(c);
     float b = brightness(c) / factor;
 
-    s = constrain(b, 0, 100); 
+    b = constrain(b, 0, 100); 
 
     return color(h, s, b);
   }
