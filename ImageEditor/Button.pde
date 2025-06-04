@@ -5,12 +5,16 @@ public class Button {
   public int bHeight;
   public String text;
   
+  public color status;
+  
   public Button(int x, int y, int w, int h, String t) {
     xCor = x;
     yCor = y;
     bWidth = w;
     bHeight = h;
     text = t;
+    
+    status = color(0, 255, 0);
   }
   
   public void applyFunction(EditorWindow window) {
