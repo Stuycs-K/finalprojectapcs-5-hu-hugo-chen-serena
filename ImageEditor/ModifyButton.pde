@@ -1,17 +1,58 @@
-public class ModifyButton extends Button {
+public class ModifyButton extends Button { //<>//
   private String type;
   public ModifyButton (int x, int y, int w, int h, String t, String type) {
     super(x, y, w, h, t);
     this.type = type;
   }
-  
+
   public void applyFunction(EditorWindow window) {
     println("Pressed " + type);
-    Modifier newMod = new Modifier(type);
-    //window.addModifier(newMod);
-    PImage newImg = window.getImage().getImage().copy();
-    newMod.applyManipulation(window.getImage().getImage(), newImg, type);
+    if (type.equals("Undo")) {
+      try {
+        window.removeModifier();
+      } catch (Exception e) {
+      }
+    } else if (type.equals("Reset")) {
+      window.modifiers = new ArrayList<Modifier>();
+    } else {
+      Modifier newMod = new Modifier(type);
+      window.addModifier(newMod);
+    }
+    applyAllModifiers(window);
+  }
+
+  public void applyAllModifiers(EditorWindow window) {
+    ArrayList<Modifier> mods = window.modifiers;
+
+    PImage newSrc = window.getSrcImage().getImage().copy();
+    // handle exposure and saturation at the end
+    int expSteps = 0;
+    int satSteps = 0;
+    for (Modifier mod : mods) {
+
+      if (mod.type.equals("+ Saturation")) {
+        satSteps += 1;
+      } else if (mod.type.equals("- Saturation")) {
+        satSteps -= 1;
+      } else if (mod.type.equals("+ Exposure")) {
+        expSteps += 1;
+      } else if (mod.type.equals("- Exposure")) {
+        expSteps -= 1;
+      } else {
+        PImage newImg = newSrc.copy();
+        mod.applyManipulation(newSrc, newImg, type);
+        newSrc = newImg;
+      }
+    }
+
+    PImage newImg = newSrc.copy();
+    float satFactor = 1 + satSteps / 10.0;
+    new Saturation(newSrc, newImg, satFactor);
+    newSrc = newImg;
+    newImg = newSrc.copy();
+    float expFactor = 1 + expSteps / 10.0;
+    new Exposure(newSrc, newImg, expFactor);
+
     window.getImage().updateImage(newImg);
   }
-  
 }

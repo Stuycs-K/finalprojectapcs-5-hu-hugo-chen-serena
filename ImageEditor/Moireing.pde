@@ -2,7 +2,6 @@ public class Moireing {
   PImage destination;
 
   public Moireing(PImage src, PImage output) {
-    println("Pressed");
     apply(src, output);
   }
 

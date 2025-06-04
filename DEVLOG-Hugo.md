@@ -4,6 +4,17 @@ This document must be updated daily every time you finish a work session.
 
 ## Hugo Hu
 
+### 2025-06-04 - Added a modifier ArrayList<>
+
+Previously, there was an issue where adding / subtracting exposure & saturation, the image would just * / a constant.
+If you blew out the highlights, you're crap outta luck. Good news though! Using a ArrayList<Modifier> to keep track of changes, you can now:
+
+- expose and saturate freely, because it applies at the end (needs to fix though! Doesn't work with moiring)
+- undo
+- reset!
+
+~ 1.5h
+
 ### 2025-06-01 - Added Moire Feature. Save button text update
 
 While trying to implement a vignetting feature, I inadvertently created a _moire_ function instead of
