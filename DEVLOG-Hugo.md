@@ -4,6 +4,13 @@ This document must be updated daily every time you finish a work session.
 
 ## Hugo Hu
 
+### 2025-06-05 - Fixed Vignetting. Fixed undo
+
+Had an issue with the undo button. Fixed, now applies all changes properly. Re-introduced the vignetting button after
+previously removing it. Vignetting works.
+
+~30min
+
 ### 2025-06-04 - Added a modifier ArrayList<>
 
 Previously, there was an issue where adding / subtracting exposure & saturation, the image would just * / a constant.

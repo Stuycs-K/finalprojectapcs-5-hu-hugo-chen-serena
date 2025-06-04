@@ -59,10 +59,6 @@ public class EditorWindow {
     currentY += buttonH + spacing;
     buttonList.add(saturationButtonN);
     
-    Button moireButton = new ModifyButton(currentX, currentY, buttonW, buttonH, "Moireing", "Moireing");
-    currentY += buttonH + spacing;
-    buttonList.add(moireButton);
-    
     Button saveButton = new SaveButton(currentX, currentY, buttonW, buttonH, "Save");
     currentY += buttonH + spacing;
     buttonList.add(saveButton);
@@ -72,6 +68,14 @@ public class EditorWindow {
     
     currentX = WindowInfo.windowX - 2 * spacing - 2 * buttonW;
     currentY = 0 + spacing;
+    
+    Button moireButton = new ModifyButton(currentX, currentY, buttonW, buttonH, "Moireing", "Moireing");
+    currentY += buttonH + spacing;
+    buttonList.add(moireButton);
+    
+    Button vignettingButton = new ModifyButton(currentX, currentY, buttonW, buttonH, "Vignetting", "Vignetting");
+    currentY += buttonH + spacing;
+    buttonList.add(vignettingButton);
     
     Button tintButton = new ModifyButton(currentX, currentY, buttonW, buttonH, "Tint", "Tint");
     currentY += buttonH + spacing;

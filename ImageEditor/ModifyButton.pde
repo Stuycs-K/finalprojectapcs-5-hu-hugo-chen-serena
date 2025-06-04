@@ -1,4 +1,4 @@
-public class ModifyButton extends Button { //<>//
+public class ModifyButton extends Button { //<>// //<>//
   private String type;
   public ModifyButton (int x, int y, int w, int h, String t, String type) {
     super(x, y, w, h, t);
@@ -40,18 +40,23 @@ public class ModifyButton extends Button { //<>//
         expSteps -= 1;
       } else {
         PImage newImg = newSrc.copy();
-        mod.applyManipulation(newSrc, newImg, type);
+        mod.applyManipulation(newSrc, newImg, mod.type);
         newSrc = newImg;
+        //println("Applied " + type);
       }
     }
 
     PImage newImg = newSrc.copy();
     float satFactor = 1 + satSteps / 10.0;
     new Saturation(newSrc, newImg, satFactor);
+    //println("Saturation: " + satFactor);
     newSrc = newImg;
     newImg = newSrc.copy();
     float expFactor = 1 + expSteps / 10.0;
     new Exposure(newSrc, newImg, expFactor);
+    //println("Exposure: " + expFactor);
+    
+    //println("Len Modifiers: " + mods.size());
 
     window.getImage().updateImage(newImg);
   }

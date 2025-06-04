@@ -29,7 +29,7 @@ public class Vignetting {
     int minDist = (int) (xWidth * .1);
     
     int startRadius = (int) (xWidth * .4);
-    int endRadius = (int) (xWidth * .5);
+    int endRadius = (int) (sqrt(   (xWidth/2)*(xWidth/2) + (yHeight/2)*(yHeight/2)  )) + 1;
     
     int centerX = xWidth / 2;
     int centerY = yHeight / 2;
@@ -37,7 +37,7 @@ public class Vignetting {
     float darkenAmount = 1;
     
     for (int currRadius = startRadius; currRadius <= endRadius; currRadius++) {
-      darkenAmount += 1.0/minDist;
+      darkenAmount += 0.5/minDist;
       
       ArrayList<Integer[]> pixelsToDarken = new ArrayList<Integer[]>();
       for (float theta = 0; theta <= 2*PI; theta+=PI/7200) {
@@ -69,7 +69,7 @@ public class Vignetting {
     float s = saturation(c);
     float b = brightness(c) / factor;
 
-    s = constrain(b, 0, 100); 
+    b = constrain(b, 0, 100); 
 
     return color(h, s, b);
   }
