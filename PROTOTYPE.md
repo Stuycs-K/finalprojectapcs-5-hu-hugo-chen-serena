@@ -24,8 +24,9 @@ After 1.5 weeks, we will have at least the following in our MVP:
 
 ### Nice To Haves
 
-- Denoise and Levelling that actually work well
+- ~Denoise~ and Levelling that actually work well
 - Added: cropping, vignetting
+- Undo and Reset Button
 - Read image EXIF data and display in editor (EXIF data is the metadata of an image, including camera model / lens / image settings)
 
 
