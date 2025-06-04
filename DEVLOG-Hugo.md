@@ -4,12 +4,12 @@ This document must be updated daily every time you finish a work session.
 
 ## Hugo Hu
 
-### 2025-06-05 - Fixed Vignetting. Fixed undo
+### 2025-06-05 - Fixed Vignetting. Fixed undo. Added status messages. Fixed vignette/moire interference w/ exp / sat
 
 Had an issue with the undo button. Fixed, now applies all changes properly. Re-introduced the vignetting button after
 previously removing it. Vignetting works.
 
-~30min
+Added status messages to the lower left corner. Fixed the interference between vignetting and moire with exposure nad saturation.
 
 ### 2025-06-04 - Added a modifier ArrayList<>
 
