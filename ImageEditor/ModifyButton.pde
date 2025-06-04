@@ -1,4 +1,4 @@
-public class ModifyButton extends Button { //<>// //<>// //<>//
+public class ModifyButton extends Button { //<>// //<>// //<>// //<>//
   private String type;
   public ModifyButton (int x, int y, int w, int h, String t, String type) {
     super(x, y, w, h, t);
@@ -25,6 +25,10 @@ public class ModifyButton extends Button { //<>// //<>// //<>//
   }
 
   public void applyAllModifiers(EditorWindow window) {
+    
+    // add a circle to left
+    this.status = color(255, 0, 0);
+    
     ArrayList<Modifier> mods = window.modifiers;
 
     PImage newSrc = window.getSrcImage().getImage().copy();
@@ -62,5 +66,7 @@ public class ModifyButton extends Button { //<>// //<>// //<>//
     //println("Len Modifiers: " + mods.size());
 
     window.getImage().updateImage(newImg);
+    
+    this.status = color(0, 255, 0);
   }
 }
