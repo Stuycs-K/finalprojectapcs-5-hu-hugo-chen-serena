@@ -58,7 +58,7 @@ void draw() {
   }
 
   image(currentImg.getImage(), 0, 0, imgWidth, imgHeight);
-  
+  textAlign(LEFT, CENTER);
   text(window.saveData, 10, height-10);
 }
 
