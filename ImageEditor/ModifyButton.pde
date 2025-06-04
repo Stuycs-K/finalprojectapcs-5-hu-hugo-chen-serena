@@ -1,4 +1,4 @@
-public class ModifyButton extends Button { //<>// //<>//
+public class ModifyButton extends Button { //<>// //<>// //<>//
   private String type;
   public ModifyButton (int x, int y, int w, int h, String t, String type) {
     super(x, y, w, h, t);
@@ -9,16 +9,19 @@ public class ModifyButton extends Button { //<>// //<>//
     println("Pressed " + type);
     if (type.equals("Undo")) {
       try {
-        window.removeModifier();
+        window.currentMsg = "Undoed " + window.removeModifier().type;
       } catch (Exception e) {
       }
     } else if (type.equals("Reset")) {
       window.modifiers = new ArrayList<Modifier>();
+      window.currentMsg = "Reset Image";
     } else {
       Modifier newMod = new Modifier(type);
       window.addModifier(newMod);
+      window.currentMsg = "Applied " + type;
     }
     applyAllModifiers(window);
+    
   }
 
   public void applyAllModifiers(EditorWindow window) {

@@ -4,6 +4,7 @@ public class EditorWindow {
   private EditorImage outputImg;
   private String srcPath;
   public String saveData;
+  public String currentMsg;
 
   private int buttonW;
   private int buttonH;
@@ -22,6 +23,7 @@ public class EditorWindow {
     modifiers = new ArrayList<Modifier>();
     
     saveData = "";
+    currentMsg = "";
     
     spacing = 20;
 
@@ -120,8 +122,8 @@ public class EditorWindow {
      modifiers.add(x);
   }
   
-  public void removeModifier() {
-    modifiers.remove(modifiers.size() - 1);
+  public Modifier removeModifier() {
+    return modifiers.remove(modifiers.size() - 1);
   }
   
 }
