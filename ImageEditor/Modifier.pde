@@ -1,6 +1,5 @@
 public class Modifier {
   public String type;
-  private String[] names = {"Blur", "Sharpen", "Exposure", "Saturation", "Vignetting", "Denoise", "Leveling"};
   
   // keep a "%" in case needed or other value to be used
   public int level;

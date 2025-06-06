@@ -1,4 +1,4 @@
-public class ModifyButton extends Button { //<>// //<>// //<>// //<>// //<>//
+public class ModifyButton extends Button { //<>// //<>// //<>// //<>// //<>// //<>//
   private String type;
   public ModifyButton (int x, int y, int w, int h, String t, String type) {
     super(x, y, w, h, t);
@@ -6,13 +6,12 @@ public class ModifyButton extends Button { //<>// //<>// //<>// //<>// //<>//
   }
 
   public void applyFunction(EditorWindow window) {
+    this.running = true;
+    //fill(color(255, 0, 0));
+    //circle(this.xCor - 10, (this.yCor +this.bHeight / 2), 10);
+    redraw();
+    
     println("Pressed " + type);
-    
-    this.status = color(255, 0, 0);
-    fill(color(255, 0, 0));
-    circle(this.xCor - 10, (this.yCor +this.bHeight / 2), 10);
-    
-   
     
     if (type.equals("Undo")) {
       try {
@@ -28,9 +27,6 @@ public class ModifyButton extends Button { //<>// //<>// //<>// //<>// //<>//
       window.currentMsg = "Applied " + type;
     }
     applyAllModifiers(window);
-    
-    
-    this.status = color(0, 255, 0);
     
   }
 
@@ -73,6 +69,8 @@ public class ModifyButton extends Button { //<>// //<>// //<>// //<>// //<>//
     //println("Len Modifiers: " + mods.size());
 
     window.getImage().updateImage(newImg);
+    
+    this.running = false;
     
   }
 }
