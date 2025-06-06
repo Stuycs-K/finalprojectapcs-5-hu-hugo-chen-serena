@@ -2,7 +2,9 @@ public class Crop {
   PImage destination;
   
   public Crop(PImage src, PImage output, int x, int y, int w, int h) {
-    output = apply(src, x, y, w, h);
+    PImage result = apply(src, x, y, w, h);
+    output.resize(result.width, result.height);
+    output.copy(result, 0, 0, result.width, result.height, 0, 0, result.width, result.height);
   }
   
   public PImage apply(PImage source, int cropX, int cropY, int cropW, int cropH) {
