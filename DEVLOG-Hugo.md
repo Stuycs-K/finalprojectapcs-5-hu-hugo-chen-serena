@@ -4,6 +4,13 @@ This document must be updated daily every time you finish a work session.
 
 ## Hugo Hu
 
+### 2025-06-06 - Added status lights, removed tint / filter, added text messages
+
+Added status lights. In-process edits will be displayed red.
+Helped serena debug her (workingb but got gaslit into thinking it wasn't) code for cropping. Investigated
+why the image resized.
+Broke status lights.
+
 ### 2025-06-05 - Fixed Vignetting. Fixed undo. Added status messages. Fixed vignette/moire interference w/ exp / sat
 
 Had an issue with the undo button. Fixed, now applies all changes properly. Re-introduced the vignetting button after

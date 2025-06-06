@@ -28,7 +28,8 @@ public class Vignetting {
     int yHeight = source.height;
     int minDist = (int) (xWidth * .1);
     
-    int startRadius = (int) (xWidth * .4);
+    //int startRadius = (int) (xWidth * .4);
+    int startRadius = 0;
     int endRadius = (int) (sqrt(   (xWidth/2)*(xWidth/2) + (yHeight/2)*(yHeight/2)  )) + 1;
     
     int centerX = xWidth / 2;

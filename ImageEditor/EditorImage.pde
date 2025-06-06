@@ -5,13 +5,13 @@ public class EditorImage {
   public EditorImage() {
     filePath = "./samples/test.jpeg";
       image = loadImage(filePath);
-      image.resize(1080, 0);
+      //image.resize(1080, 0);
   }
   
   public void updatePath (String path) {
     try {
       image = loadImage(path);
-      image.resize(1080, 0);
+      //image.resize(1080, 0);
       filePath = path;
     }
     catch (Exception e) {
