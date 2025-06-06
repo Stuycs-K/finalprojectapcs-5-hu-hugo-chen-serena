@@ -12,5 +12,6 @@ public class Crop {
         destination.set(r, c, pixel);
       }
     }
+    destination.updatePixels();
   }
 }
