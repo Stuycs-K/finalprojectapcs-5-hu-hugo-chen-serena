@@ -1,5 +1,5 @@
 public class Exposure {
-  PImage destination;
+  //PImage destination;
   
   public Exposure(PImage src, PImage output, float factor) {
     apply(src, output, factor);
