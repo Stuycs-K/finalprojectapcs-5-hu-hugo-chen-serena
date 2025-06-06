@@ -54,6 +54,10 @@ public class Modifier {
         new Filters(src, newImg);
         level++;
       }
+      else if(type.equals("Crop")) {
+        new Crop(src, newImg, 50, 50, 300, 300);
+        level++;
+      }
         
   }
   
