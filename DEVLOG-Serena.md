@@ -47,13 +47,9 @@ This document must be updated daily every time you finish a work session.
 
 6/4 
 - discussed additional features to implement, slight bug testing for undo and reset
-<<<<<<< HEAD
-- updated UML
-=======
 - updated UML diagram (40 mins)
 
 6/5
 - started crop class, did some research
 - crop class now works temporarily with hardcoded values but will be updated later
 - crop class works with all current features including save and undo (1 hr)
->>>>>>> serena
