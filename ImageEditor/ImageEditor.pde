@@ -32,6 +32,9 @@ void draw() {
     textAlign(CENTER, CENTER);
     fill(0);
     text(b.text, b.xCor + b.bWidth/2, b.yCor + b.bHeight/2);
+    
+    fill(b.status);
+    circle(b.xCor - 10, (b.yCor + b.bHeight / 2), 10);
   }
 
   // resize image to no more than 75% width OR 75% height
@@ -58,7 +61,8 @@ void draw() {
   }
 
   image(currentImg.getImage(), 0, 0, imgWidth, imgHeight);
-  
+  textAlign(LEFT, CENTER);
+  text(window.currentMsg, 10, height-30);
   text(window.saveData, 10, height-10);
 }
 

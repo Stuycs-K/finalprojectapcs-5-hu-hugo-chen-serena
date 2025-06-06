@@ -4,6 +4,7 @@ public class EditorWindow {
   private EditorImage outputImg;
   private String srcPath;
   public String saveData;
+  public String currentMsg;
 
   private int buttonW;
   private int buttonH;
@@ -22,6 +23,7 @@ public class EditorWindow {
     modifiers = new ArrayList<Modifier>();
     
     saveData = "";
+    currentMsg = "";
     
     spacing = 20;
 
@@ -59,10 +61,6 @@ public class EditorWindow {
     currentY += buttonH + spacing;
     buttonList.add(saturationButtonN);
     
-    Button moireButton = new ModifyButton(currentX, currentY, buttonW, buttonH, "Moireing", "Moireing");
-    currentY += buttonH + spacing;
-    buttonList.add(moireButton);
-    
     Button saveButton = new SaveButton(currentX, currentY, buttonW, buttonH, "Save");
     currentY += buttonH + spacing;
     buttonList.add(saveButton);
@@ -72,6 +70,14 @@ public class EditorWindow {
     
     currentX = WindowInfo.windowX - 2 * spacing - 2 * buttonW;
     currentY = 0 + spacing;
+    
+    Button moireButton = new ModifyButton(currentX, currentY, buttonW, buttonH, "Moireing", "Moireing");
+    currentY += buttonH + spacing;
+    buttonList.add(moireButton);
+    
+    Button vignettingButton = new ModifyButton(currentX, currentY, buttonW, buttonH, "Vignetting", "Vignetting");
+    currentY += buttonH + spacing;
+    buttonList.add(vignettingButton);
     
     Button tintButton = new ModifyButton(currentX, currentY, buttonW, buttonH, "Tint", "Tint");
     currentY += buttonH + spacing;
@@ -116,8 +122,8 @@ public class EditorWindow {
      modifiers.add(x);
   }
   
-  public void removeModifier() {
-    modifiers.remove(modifiers.size() - 1);
+  public Modifier removeModifier() {
+    return modifiers.remove(modifiers.size() - 1);
   }
   
 }
