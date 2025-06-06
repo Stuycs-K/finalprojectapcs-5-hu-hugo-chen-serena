@@ -5,7 +5,7 @@ public class Button {
   public int bHeight;
   public String text;
   
-  public color status;
+  public boolean running;
   
   public Button(int x, int y, int w, int h, String t) {
     xCor = x;
@@ -14,7 +14,7 @@ public class Button {
     bHeight = h;
     text = t;
     
-    status = color(0, 255, 0);
+    running = false;
   }
   
   public void applyFunction(EditorWindow window) {

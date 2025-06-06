@@ -2,7 +2,7 @@ public class Vignetting {
   PImage destination;
 
   public Vignetting(PImage src, PImage output) {
-    println("Pressed");
+    //println("Pressed");
     apply(src, output);
   }
 
@@ -28,7 +28,8 @@ public class Vignetting {
     int yHeight = source.height;
     int minDist = (int) (xWidth * .1);
     
-    int startRadius = (int) (xWidth * .4);
+    //int startRadius = (int) (xWidth * .4);
+    int startRadius = 0;
     int endRadius = (int) (sqrt(   (xWidth/2)*(xWidth/2) + (yHeight/2)*(yHeight/2)  )) + 1;
     
     int centerX = xWidth / 2;
@@ -37,7 +38,7 @@ public class Vignetting {
     float darkenAmount = 1;
     
     for (int currRadius = startRadius; currRadius <= endRadius; currRadius++) {
-      darkenAmount += 0.5/minDist;
+      darkenAmount += 0.1/minDist;
       
       ArrayList<Integer[]> pixelsToDarken = new ArrayList<Integer[]>();
       for (float theta = 0; theta <= 2*PI; theta+=PI/7200) {

@@ -27,20 +27,29 @@ void draw() {
   ArrayList<Button> buttonList = window.getButtons();
   int bRadius = 20;
   for (Button b : buttonList) {
+    if (b.running) {
+      fill(color(255, 0, 0));
+      circle(b.xCor - 10, (b.yCor +b.bHeight / 2), 10);
+    }
+  }
+  
+  for (Button b : buttonList) {
     fill(255);
     rect(b.xCor, b.yCor, b.bWidth, b.bHeight, bRadius);
     textAlign(CENTER, CENTER);
     fill(0);
     text(b.text, b.xCor + b.bWidth/2, b.yCor + b.bHeight/2);
-    
-    fill(b.status);
-    circle(b.xCor - 10, (b.yCor + b.bHeight / 2), 10);
+
+    //fill(b.status);
+    //circle(b.xCor - 10, (b.yCor + b.bHeight / 2), 10);
+
+    fill(255);
   }
 
   // resize image to no more than 75% width OR 75% height
   float windowRatio = width / height;
   EditorImage currentImg = window.getImage();
-  
+
   float imageRatio = currentImg.getRatio();
   int[] res = currentImg.getResolution();
 
