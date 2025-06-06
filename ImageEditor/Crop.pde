@@ -1,7 +1,7 @@
-public class Cropping {
+public class Crop {
   PImage destination;
   
-  public Cropping(PImage src, PImage output, int x, int y, int w, int h) {
+  public Crop(PImage src, PImage output, int x, int y, int w, int h) {
     apply(src, output, x, y, w, h);
   }
   

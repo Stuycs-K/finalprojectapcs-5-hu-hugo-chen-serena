@@ -94,6 +94,11 @@ public class EditorWindow {
     Button resetButton = new ModifyButton(currentX, currentY, buttonW, buttonH, "Reset", "Reset");
     currentY += buttonH + spacing;
     buttonList.add(resetButton);
+    
+    Button cropButton = new ModifyButton(currentX, currentY, buttonW, buttonH, "Crop", "Crop");
+    currentY += buttonH + spacing;
+    buttonList.add(cropButton);
+
 
   }
   
