@@ -1,4 +1,4 @@
-public class ModifyButton extends Button { //<>// //<>// //<>// //<>// //<>// //<>//
+public class ModifyButton extends Button { //<>// //<>// //<>// //<>// //<>// //<>// //<>//
   private String type;
   public ModifyButton (int x, int y, int w, int h, String t, String type) {
     super(x, y, w, h, t);
@@ -9,7 +9,7 @@ public class ModifyButton extends Button { //<>// //<>// //<>// //<>// //<>// //
     this.running = true;
     //fill(color(255, 0, 0));
     //circle(this.xCor - 10, (this.yCor +this.bHeight / 2), 10);
-    redraw();
+    //redraw();
     
     println("Pressed " + type);
     
@@ -26,6 +26,8 @@ public class ModifyButton extends Button { //<>// //<>// //<>// //<>// //<>// //
       window.addModifier(newMod);
       window.currentMsg = "Applied " + type;
     }
+    
+    //redraw();
     applyAllModifiers(window);
     
   }
