@@ -1,6 +1,5 @@
 EditorWindow window;
 int tickCounter;
-
 void setup() {
   size(1366, 768);
   window = new EditorWindow();
@@ -26,12 +25,12 @@ void draw() {
   // draw buttons
   ArrayList<Button> buttonList = window.getButtons();
   int bRadius = 20;
-  for (Button b : buttonList) {
-    if (b.running) {
-      fill(color(255, 0, 0));
-      circle(b.xCor - 10, (b.yCor +b.bHeight / 2), 10);
-    }
-  }
+  //for (Button b : buttonList) {
+  //  if (b.running) {
+  //    fill(color(255, 0, 0));
+  //    circle(b.xCor - 10, (b.yCor +b.bHeight / 2), 10);
+  //  }
+  //}
   
   for (Button b : buttonList) {
     fill(255);
@@ -79,7 +78,11 @@ void mouseClicked() {
   ArrayList<Button> buttonList = window.getButtons();
   for (Button b : buttonList) {
     if (b.buttonClicked(mouseX, mouseY)) {
+      //fill(color(255, 0, 0));
+      //circle(b.xCor - 10, (b.yCor +b.bHeight / 2), 10);
       b.applyFunction(window);
+      //fill(color(0, 255, 0));
+      //circle(b.xCor - 10, (b.yCor +b.bHeight / 2), 10);
     }
   }
 }

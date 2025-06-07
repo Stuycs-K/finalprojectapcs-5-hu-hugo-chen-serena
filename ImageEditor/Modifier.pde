@@ -54,7 +54,7 @@ public class Modifier {
         level++;
       }
       else if(type.equals("Crop")) {
-        new Crop(src, newImg, 50, 50, 300, 300);
+        new Crop(src, newImg, 600, 200, 300, 300);
         level++;
       }
         
