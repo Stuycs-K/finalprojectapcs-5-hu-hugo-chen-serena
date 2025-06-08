@@ -4,6 +4,14 @@ This document must be updated daily every time you finish a work session.
 
 ## Hugo Hu
 
+### 2025-06-07 - Used Serena's cropping mechanism, added keyboard cropping, implemented that
+
+Took serena's working Crop class. Added a keyboard input (arrows, space) to adjust cropping, with guide marker lines
+Re-wrote savebutton class soemwhat, to re-apply changes at the end and make cropping work
+Crop now works
+
+~2.5h
+
 ### 2025-06-06 - Added status lights, removed tint / filter, added text messages
 
 Added status lights. In-process edits will be displayed red.
