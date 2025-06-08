@@ -4,6 +4,11 @@ This document must be updated daily every time you finish a work session.
 
 ## Hugo Hu
 
+### 2025-06-08 - Added Help Text, Crop Guide Info, Fixed Crop Resize, QOL improvements
+
+Added help text to RHS bottom corner. Crop Guide now has a status "use SPACE" when enabled. Modified SC's crop class
+to make changes a bit better, save easier, without re-sizing the image on the display.
+
 ### 2025-06-07 - Used Serena's cropping mechanism, added keyboard cropping, implemented that
 
 Took serena's working Crop class. Added a keyboard input (arrows, space) to adjust cropping, with guide marker lines

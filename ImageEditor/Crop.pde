@@ -5,8 +5,8 @@ public class Crop {
     PImage result = apply(src, x, y, w, h);
     //System.out.println(result.width);
     //System.out.println(result.height);
-    output.resize(result.width, result.height);
-    output.copy(result, 0, 0, result.width, result.height, 0, 0, result.width, result.height);
+    //output.resize(result.width, result.height);
+    //output.copy(result, 0, 0, result.width, result.height, 0, 0, result.width, result.height);
     //System.out.println(output.width);
     //System.out.println(output.height);
   }
