@@ -110,9 +110,9 @@ public class EditorWindow {
     currentY += buttonH + spacing;
     buttonList.add(resetButton);
 
-    Button cropButton = new ModifyButton(currentX, currentY, buttonW, buttonH, "Crop", "Crop");
-    currentY += buttonH + spacing;
-    buttonList.add(cropButton);
+    //Button cropButton = new ModifyButton(currentX, currentY, buttonW, buttonH, "Crop", "Crop");
+    //currentY += buttonH + spacing;
+    //buttonList.add(cropButton);
     
     Button startCrop = new StartCropButton(currentX, currentY, buttonW, buttonH);
     currentY += buttonH + spacing;

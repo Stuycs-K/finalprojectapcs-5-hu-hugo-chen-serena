@@ -24,13 +24,14 @@ public class SaveButton extends Button {
     int topCrop = (int) (( (float) window.cropTop / window.dispH) * (h));
     int bottomCrop = h - (int) (( (float) window.cropBottom / window.dispH) * (h));
 
-    new Crop(window.getSrcImage().getImage(), newImg, leftCrop, topCrop, rightCrop - leftCrop, bottomCrop - topCrop);
+    Crop x = new Crop(window.getImage().getImage(), newImg, leftCrop, topCrop, rightCrop - leftCrop, bottomCrop - topCrop);
+    newImg = x.apply(newImg, leftCrop, topCrop, rightCrop - leftCrop, bottomCrop - topCrop);
     //println(w + "," + h);
     //println(leftCrop + "," + rightCrop + "," + topCrop + "," + bottomCrop);
     //new Crop(window.getSrcImage().getImage(), newImg, 0, 0, 1000, 1000);
     
-    applyAllModifiers(window, newImg);
-    newImg = window.getPImage();
+    //applyAllModifiers(window, newImg);
+    //newImg = window.getPImage();
     window.getImage().saveFile(window, newImg);
   }
   
