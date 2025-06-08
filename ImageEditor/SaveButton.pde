@@ -10,13 +10,24 @@ public class SaveButton extends Button {
     int w = window.getPImage().width;
     int h = window.getPImage().height;
 
-    int leftCrop = (int) ( (float) window.cropLeft / window.dispW) * (w);
-    int rightCrop = w - (int) ( (float) window.cropRight / window.dispW) * (w);
+    int leftCrop = (int) (( (float) window.cropLeft / window.dispW) * (w));
+    //println((float) window.cropLeft / window.dispW);
+    //println(( (float) window.cropLeft / window.dispW) * (w));
+    //println((int) (( (float) window.cropLeft / window.dispW) * (w));
+    //println(leftCrop);
+    //println("WCL: " + window.cropLeft);
+    //println("WDSPW: " + window.dispW);
+    //println("W: " + w);
+    
+    int rightCrop = w - (int) (( (float) window.cropRight / window.dispW) * (w));
 
-    int topCrop = (int) ( (float) window.cropTop / window.dispH) * (h);
-    int bottomCrop = w - (int) ( (float) window.cropBottom / window.dispH) * (h);
+    int topCrop = (int) (( (float) window.cropTop / window.dispH) * (h));
+    int bottomCrop = h - (int) (( (float) window.cropBottom / window.dispH) * (h));
 
     new Crop(window.getSrcImage().getImage(), newImg, leftCrop, topCrop, rightCrop - leftCrop, bottomCrop - topCrop);
+    //println(w + "," + h);
+    //println(leftCrop + "," + rightCrop + "," + topCrop + "," + bottomCrop);
+    //new Crop(window.getSrcImage().getImage(), newImg, 0, 0, 1000, 1000);
     window.getImage().saveFile(window, newImg);
   }
 }

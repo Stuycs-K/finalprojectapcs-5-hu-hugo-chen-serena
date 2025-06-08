@@ -8,8 +8,8 @@ public class StartCropButton extends Button {
       window.cropMode = 0;
     } else {
       window.cropMode = -1;
-      println(window.cropLeft + ", " + window.cropRight);
-      println(window.cropTop + ", " + window.cropBottom);
+      //println(window.cropLeft + ", " + window.cropRight);
+      //println(window.cropTop + ", " + window.cropBottom);
     }
   }
 }
