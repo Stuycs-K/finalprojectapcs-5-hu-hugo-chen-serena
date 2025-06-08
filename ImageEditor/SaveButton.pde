@@ -28,6 +28,52 @@ public class SaveButton extends Button {
     //println(w + "," + h);
     //println(leftCrop + "," + rightCrop + "," + topCrop + "," + bottomCrop);
     //new Crop(window.getSrcImage().getImage(), newImg, 0, 0, 1000, 1000);
+    
+    applyAllModifiers(window, newImg);
+    newImg = window.getPImage();
     window.getImage().saveFile(window, newImg);
+  }
+  
+  
+  public void applyAllModifiers(EditorWindow window, PImage input) {
+    
+    ArrayList<Modifier> mods = window.modifiers;
+
+    PImage newSrc = input.copy();
+    // handle exposure and saturation at the end
+    int expSteps = 0;
+    int satSteps = 0;
+    for (Modifier mod : mods) {
+
+      if (mod.type.equals("+ Saturation")) {
+        satSteps += 1;
+      } else if (mod.type.equals("- Saturation")) {
+        satSteps -= 1;
+      } else if (mod.type.equals("+ Exposure")) {
+        expSteps += 1;
+      } else if (mod.type.equals("- Exposure")) {
+        expSteps -= 1;
+      } else {
+        PImage newImg = newSrc.copy();
+        mod.applyManipulation(newSrc, newImg, mod.type);
+        newSrc = newImg;
+        //println("Applied " + type);
+      }
+    }
+
+    PImage newImg = newSrc.copy();
+    float satFactor = 1 + satSteps / 10.0;
+    new Saturation(newSrc, newImg, satFactor);
+    //println("Saturation: " + satFactor);
+    newSrc = newImg;
+    newImg = newSrc.copy();
+    float expFactor = 1 + expSteps / 10.0;
+    new Exposure(newSrc, newImg, expFactor);
+    //println("Exposure: " + expFactor);
+    
+    //println("Len Modifiers: " + mods.size());
+
+    window.getImage().updateImage(newImg);
+    
   }
 }

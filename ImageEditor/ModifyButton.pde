@@ -1,4 +1,4 @@
-public class ModifyButton extends Button { //<>//
+public class ModifyButton extends Button { //<>// //<>//
   private String type;
   public ModifyButton (int x, int y, int w, int h, String t, String type) {
     super(x, y, w, h, t);
