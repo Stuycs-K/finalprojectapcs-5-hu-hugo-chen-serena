@@ -44,13 +44,13 @@ void draw() {
   if (window.cropMode == -1) {
     cropMsg = "Cropping Off";
   } else if (cropMode == 0) {
-    cropMsg = "Cropping Left Border";
+    cropMsg = "Cropping Left Border - use left and right arrow keys to move bar";
   } else if (cropMode == 1) {
-    cropMsg = "Cropping Right Border";
+    cropMsg = "Cropping Right Border - use left and right arrow keys to move bar";
   } else if (cropMode == 2) {
-    cropMsg = "Cropping Top Border";
+    cropMsg = "Cropping Top Border - use up and down arrow keys to move bar";
   } else if (cropMode == 3) {
-    cropMsg = "Cropping Bottom Border";
+    cropMsg = "Cropping Bottom Border - use up and down arrow keys to move bar";
   }
 
   for (Button b : buttonList) {

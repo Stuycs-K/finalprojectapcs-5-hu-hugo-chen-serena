@@ -1,6 +1,6 @@
 public class StartCropButton extends Button {
   public StartCropButton (int x, int y, int w, int h) {
-    super(x, y, w, h, "CROP");
+    super(x, y, w, h, "Crop");
   }
   
   public void applyFunction(EditorWindow window) {
