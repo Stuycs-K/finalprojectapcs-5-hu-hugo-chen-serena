@@ -21,21 +21,20 @@ public class Tint {
     float r, g, b = 0;
     
     if (colour.equals("Orange")) {
-      r = red(c) * 0.9;
-      g = green(c) * 1.0;
-      b = blue(c) * 1.5;
+      r = red(c) * 1.08;
+      g = green(c) * 1.02;
+      b = blue(c) * 0.8;
     }
     else if (colour.equals("Blue")) {
       r = red(c) * 0.9;
       g = green(c) * 1.0;
-      b = blue(c) * 1.5;
+      b = blue(c) * 1.15;
     }
     else {
       r = red(c);
       g = green(c);
       b = blue(c);
     }
-      
 
     // Clamp values to 0–255
     r = constrain(r, 0, 255);
