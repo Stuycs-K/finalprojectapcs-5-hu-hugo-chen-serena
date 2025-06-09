@@ -36,13 +36,13 @@ public class Modifier {
     } else if (type.equals("Moireing")) {
       new Moireing(src, newImg);
       level++;
-    } else if (type.equals("Tint")) {
+    } else if (type.equals("Orange Tint")) {
+      new Tint(src, newImg, "Orange");
+      level++;
+    } else if (type.equals("Blue Tint")) {
       new Tint(src, newImg, "Blue");
       level++;
-    } else if (type.equals("Filter")) {
-      new Filters(src, newImg);
-      level++;
-    } else if (type.equals("Crop")) {
+    }else if (type.equals("Crop")) {
       new Crop(src, newImg, 600, 200, 300, 300);
       level++;
     }

@@ -21,6 +21,10 @@ public class ModifyButton extends Button { //<>// //<>//
     } else if (type.equals("Reset")) {
       window.modifiers = new ArrayList<Modifier>();
       window.currentMsg = "Reset Image";
+      window.cropLeft = 0;
+      window.cropRight = 0;
+      window.cropTop = 0;
+      window.cropBottom = 0;
     } else {
       Modifier newMod = new Modifier(type);
       window.addModifier(newMod);

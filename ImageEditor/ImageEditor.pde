@@ -5,6 +5,7 @@ String cropMsg;
 int imgWidth;
 int imgHeight;
 
+
 void setup() {
   size(1366, 768);
   window = new EditorWindow();
@@ -97,6 +98,12 @@ void draw() {
   text(window.currentMsg, 10, height-30);
   text(window.saveData, 10, height-10);
   
+  String txt = "Welcome to Photomarket, a free alternative to Photoshop*.";
+  text(txt, width - 310, height - 170);
+  txt = "Press CROP to enable or disable crop mode, then follow instructions on the bottom left.\nPress other buttons to apply modifications as usual.\nPress Save for an image to be saved to source file folder, appended with _PROCESSING to filename.";
+  text(txt, width - 310, height - 160, 290, 90);
+  txt = "Legal: Photoshop is a registered trademark of Adobe, Inc. This application is not affiliated with, endorsed by, or sponsored by Adobe or any other company mentioned. All product names, trademarks, and registered trademarks are the property of their respective owners.";
+  text(txt, width - 310, height - 65, 290, 40);
   //int h = window.getPImage().height;
   //int w = window.getPImage().width;
   
@@ -109,7 +116,11 @@ void draw() {
     line(imgWidth - window.cropRight, 0, imgWidth - window.cropRight, imgHeight);
     line(0, window.cropTop, imgWidth, window.cropTop);
     line(0, imgHeight - window.cropBottom, imgWidth, imgHeight - window.cropBottom);
-  } else if (cropMode == 0) {
+  } else {
+    text("Press SPACE to toggle border", 10, height-70);
+  }
+  
+  if (cropMode == 0) {
     // left
     stroke(color(255, 0, 255));
     line(window.cropLeft, 0, window.cropLeft, imgHeight);
