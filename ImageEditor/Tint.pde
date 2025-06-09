@@ -7,12 +7,29 @@ public class Tint {
  
    //tint doesnt update pixel data directly, maybe thats why it doesnt save when exporting images directly
    public void apply(PImage source, PImage destination, String colour) {
-    //System.out.println("apply");
-    //image(source, 0, 0);
-    tint(0, 153, 204);
-    destination.copy(source, 0, 0, source.width, source.height, 0, 0, destination.width, destination.height);
+    for (int r = 0; r < source.width; r++) {
+      for (int c = 0; c < source.height; c++) {
+        //destination.get(r, c) = calcNewColor(source, r, c);
+        destination.set(r, c, changeExposure(source, r, c, "Orange"));
+      }
+    }
    }
-}
+   
+   public color changeExposure(PImage img, int x, int y, String colour) {
+    
+    color c = img.get(x, y);
+    float r = red(c) * 1.2;
+    float g = green(c) * 1.1;
+    float b = blue(c) * 0.9;
 
+    // Clamp values to 0–255
+    r = constrain(r, 0, 255);
+    g = constrain(g, 0, 255);
+    b = constrain(b, 0, 255);
+
+    return color(r, g, b);
+    
+  }
+}
 
   
