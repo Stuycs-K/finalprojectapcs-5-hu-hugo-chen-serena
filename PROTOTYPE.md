@@ -43,7 +43,7 @@ We will be modifying our kernel lab for some of the basic manipulations such as 
 # Project Design
 
 UML Diagrams and descriptions of key algorithms, classes, and how things fit together.
-
+![NEW UPDATED UML Diagram](/images/new-uml.png)
 ![UML Diagram](/images/UMLClass.png)
 
 # Intended pacing
