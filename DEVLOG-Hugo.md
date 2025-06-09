@@ -7,7 +7,9 @@ This document must be updated daily every time you finish a work session.
 ### 2025-06-08 - Added Help Text, Crop Guide Info, Fixed Crop Resize, QOL improvements
 
 Added help text to RHS bottom corner. Crop Guide now has a status "use SPACE" when enabled. Modified SC's crop class
-to make changes a bit better, save easier, without re-sizing the image on the display.
+to make changes a bit better, save easier, without re-sizing the image on the display. approx 30min.
+
+Filmed the demo video (with Serena): approx 30-40min.
 
 ### 2025-06-07 - Used Serena's cropping mechanism, added keyboard cropping, implemented that
 
@@ -22,7 +24,9 @@ Crop now works
 Added status lights. In-process edits will be displayed red.
 Helped serena debug her (workingb but got gaslit into thinking it wasn't) code for cropping. Investigated
 why the image resized.
-Broke status lights.
+Broke status lights. Lots of time debugging - might have something to do with the way draw() / redraw() is called.
+
+~ 40min
 
 ### 2025-06-05 - Fixed Vignetting. Fixed undo. Added status messages. Fixed vignette/moire interference w/ exp / sat
 
@@ -30,6 +34,8 @@ Had an issue with the undo button. Fixed, now applies all changes properly. Re-i
 previously removing it. Vignetting works.
 
 Added status messages to the lower left corner. Fixed the interference between vignetting and moire with exposure nad saturation.
+
+~ 1h
 
 ### 2025-06-04 - Added a modifier ArrayList<>
 
