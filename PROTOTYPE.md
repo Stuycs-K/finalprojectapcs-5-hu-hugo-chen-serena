@@ -25,11 +25,11 @@ After 1.5 weeks, we will have at least the following in our MVP:
 ### Nice To Haves
 
 - ~Denoise and Levelling that actually work well~ (was harder than expected, decided to do vignetting and moireing instead, ran out of time)
-- Added: cropping, vignetting, tinting
-- add and subtract buttons for exposure and saturation
-- Undo and Reset Button
+- New: cropping, vignetting, tinting
+- New: add and subtract buttons for exposure and saturation
+- New: Undo and Reset Button
 - ~Read image EXIF data and display in editor (EXIF data is the metadata of an image, including camera model / lens / image settings)~ (ran out of time as well)
-- text at the bottom of screen indicating instructions as well as actions you just performed
+- New: text at the bottom of screen indicating instructions as well as actions you just performed
 
 
 # Technical Details
