@@ -80,4 +80,4 @@ Statement from Hugo: I believe this document accurately reflects the contributio
 - added orange tint and blue tint (1 hr)
 - filmed video with hugo (40 mins)
 - changed cropping display text and cleaned up code
-- updated readMe, prototype, UML diagram (1 hr)
+- updated readMe, prototype, UML diagram (1.5 hr)
