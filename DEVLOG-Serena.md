@@ -60,3 +60,6 @@ This document must be updated daily every time you finish a work session.
 
 6/8
 - fixed crop so now it works with reset button
+- scrapped filters class
+- modified crop class so now it works with saving
+- added orange tint and blue tint (1 hr)
