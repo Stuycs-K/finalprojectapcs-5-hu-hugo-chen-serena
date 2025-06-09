@@ -145,7 +145,7 @@ void draw() {
     line(imgWidth - window.cropRight, 0, imgWidth - window.cropRight, imgHeight);
     line(0, imgHeight - window.cropBottom, imgWidth, imgHeight - window.cropBottom);
   } else if (cropMode == 3) {
-    // top
+    // bottom
     stroke(color(255, 0, 255));
     line(0, imgHeight - window.cropBottom, imgWidth, imgHeight - window.cropBottom);
     stroke(color(0, 255, 255));

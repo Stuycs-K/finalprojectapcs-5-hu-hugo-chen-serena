@@ -2,44 +2,11 @@ public class ApplyModKernel {
   String[]names;
   Kernel[]kernels;
   int currentKernel;
-  PImage car, destination;
-  //you can have other instance variables here
+  PImage destination;
 
-
-  //void keyPressed() {
-  //  //write code to cycle through kernel here
-
-
-
-  //  currentKernel = (currentKernel + 1) % kernels.length;
-
-  //  PImage car = loadImage("redcar.png");
-  //  PImage output = car.copy();
-
-  //  apply(car, output, kernels[currentKernel].kernel);
-  //  image(car, 0, 0);
-  //  image(output, car.width, 0);
-
-  //  fill(0);
-  //  text("Kernel: " + names[currentKernel], 15, 15);
-  //}
 
   public ApplyModKernel(PImage src, PImage output, int opt) {
     currentKernel = 0;
-    //Kernel k = new Kernel( new float[][] {
-    //  {-1, -1, -1},
-    //  {-1, 8, -1},
-    //  {-1, -1, -1}
-    //  } );
-    //Kernel k2 = new Kernel( new float[][] {
-    //  {.11, .11, .11},
-    //  {.11, .11, .11},
-    //  {.11, .11, .11}
-    //  } );
-    //k2.apply(car, output);
-    //image(car, 0, 0);
-    //image(output, car.width, 0);
-
 
 
     currentKernel = 0;
@@ -102,8 +69,6 @@ public class ApplyModKernel {
   }
 
   color calcNewColor(PImage img, int x, int y, float[][] kernel) {
-    //Hint: start by always returning black.
-    //This will let you test your apply method right away!
 
     if (x <=0 || x >= img.width - 1 || y <= 0 || y >= img.height - 1) {
       return color(255);
@@ -127,14 +92,6 @@ public class ApplyModKernel {
         convGSum += kernelVal * green(imgColor);
         convBSum += kernelVal * blue(imgColor);
 
-        //color imgColor = img.pixels[(x + i - 1) * img.height + (y + j - 1)];
-        //float R = kernel[i][j] * red(imgColor);
-        //float G = kernel[i][j] * green(imgColor);
-        //float B = kernel[i][j] * blue(imgColor);
-
-        //convRSum += clamp(R);
-        //convGSum += clamp(G);
-        //convBSum += clamp(B);
       }
     }
 
@@ -150,7 +107,6 @@ public class ApplyModKernel {
     //System.out.println("apply");
     for (int r = 0; r < source.width; r++) {
       for (int c = 0; c < source.height; c++) {
-        //destination.get(r, c) = calcNewColor(source, r, c);
         destination.set(r, c, calcNewColor(source, r, c, kernel));
       }
     }
