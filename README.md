@@ -3,9 +3,9 @@
 # Project Description
 
 !["logo" of photomarket](./images/adobe-photoshop-cc-logo-png_seeklogo-268287_PROCESSING.jpg)
-Photomarket (Pm) is a photo editor application that allows users to apply basic image manipulations to their photos, allowing your photo to get your desired look and feel. Our project is inspired by photo editors seen in our daily lives, mainly the iPhone one. The user can load their own image (or edit the preset image!) into the application and later one save the newly edited image into the same folder that their original image was in but with a post-fix to show that it is the edited photo. The application includes several image manipulations available: Blur, Sharpen, Exposure, Saturation, Moireing, Vignetting, Orange Tint, Blue Tint, and Cropping. The program also has an undo and reset button available just in case you do not like the manipulations that you picked. The final image that is saved will be the same one that you see on the interface when you press the save button.
+Photomarket (Pm) is a photo editor application that allows users to apply basic image manipulations to their photos, allowing your photo to get your desired look and feel. Our project is inspired by photo editors seen in our daily lives, mainly the iPhone one. The user can load their own image (or edit the preset image!) into the application and later one save the newly edited image into the same folder that their original image was in but with a post-fix to show that it is the edited photo. The application includes several image manipulations available: Blur, Sharpen, Exposure, Saturation, Moireing, Vignetting, Orange Tint, Blue Tint, and Cropping. The program also has Undo and Reset buttons available just in case you do not like the manipulations that you added. The final image that is saved when you press the save button will be the same one that you see on the interface when you press the save button.
 
-Demo Video: ![here](https://www.youtube.com/watch?v=pfJsYrNsm_4)
+Demo Video: [here](https://www.youtube.com/watch?v=pfJsYrNsm_4)
 
 # Intended usage
 
@@ -21,6 +21,6 @@ When the user first loads the program, they will be prompted to select a photo f
 | Vignetting | Button | Darkens the corners in a radial fashion, to simulate a natural phenomenon in optics with dropoff at the edges. Increase vignetting to put the focus on the center subject. |
 | Orange Tint | Button | Adds an orange tint to the image. Similar to a "warm filter" on iPhone photo editors. Can increase or decrease tint as you wish, is not a set amount of orange. |
 | Blue Tint | Button | The same as Orange Tint, except its blue. Similar to a "cool filter". (Can be combined with Orange Tint to create a "green" tint!) |
-| Undo | Button | Undoes the most recent action and works when the same manipulation is stacked. For exmaple, if someone were to press exposure 5 times and press undo, all the exposure would not be removed. They would have to press Undo 5 times as well to revert back to the original image. |
+| Undo | Button | Undoes the most recent action and works when the same manipulation is stacked. For example, if someone were to press exposure 5 times and press undo, all the exposure would not be removed. They would have to press Undo 5 times as well to revert back to the original image. |
 | Reset | Button | Reverts image back to its original as if it was just loaded into the program. Works will all manipulations and cropping guides will go back into its original place as well. |
 | Crop | Space + Arrow Keys | Was your image composition horrible? Couldn't zoom in farther? You're in luck! Using this non-proprietary cropping function, you too can get closer to your subject, without walking, only at the expense of resolution! After turning the crop guide on via the button, use SPACE to pick which border you're cropping, then use arrow keys to move the cropping guides. |
