@@ -19,7 +19,7 @@ This document must be updated daily every time you finish a work session.
 
 5/28
 - Added tracker to Editor Window
-- added PImage method to Editor window (15 mins)
+- added PImage method to Editor window (30 mins)
 
 5/29
 - started Exposure class including applyExposure and changeExposure 
@@ -47,9 +47,16 @@ This document must be updated daily every time you finish a work session.
 
 6/4 
 - discussed additional features to implement, slight bug testing for undo and reset
-- updated UML diagram (40 mins)
+- updated UML diagram, not put onto github until 6/8 (1 hr)
 
 6/5
 - started crop class, did some research
 - crop class now works temporarily with hardcoded values but will be updated later
 - crop class works with all current features including save and undo (1 hr)
+
+6/6 
+- tried debugging crop class since i thought it only cropped the top right corner
+- turns out it was working, i broke it then fixed it (with hugo's help!) (40 mins)
+
+6/8
+- fixed crop so now it works with reset button
