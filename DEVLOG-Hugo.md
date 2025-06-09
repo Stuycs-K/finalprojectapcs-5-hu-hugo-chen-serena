@@ -4,6 +4,8 @@ This document must be updated daily every time you finish a work session.
 
 ## Hugo Hu
 
+Statement from Serena: I believe this document accurately reflects the contributions of my teammate.
+
 ### 2025-06-08 - Added Help Text, Crop Guide Info, Fixed Crop Resize, QOL improvements
 
 Added help text to RHS bottom corner. Crop Guide now has a status "use SPACE" when enabled. Modified SC's crop class
