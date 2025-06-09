@@ -94,9 +94,9 @@ public class EditorWindow {
     currentY += buttonH + spacing;
     buttonList.add(vignettingButton);
 
-    //Button tintButton = new ModifyButton(currentX, currentY, buttonW, buttonH, "Tint", "Tint");
-    //currentY += buttonH + spacing;
-    //buttonList.add(tintButton);
+    Button tintButton = new ModifyButton(currentX, currentY, buttonW, buttonH, "Tint", "Tint");
+    currentY += buttonH + spacing;
+    buttonList.add(tintButton);
 
     //Button filtersButton = new ModifyButton(currentX, currentY, buttonW, buttonH, "Filter", "Filter");
     //currentY += buttonH + spacing;
@@ -117,6 +117,7 @@ public class EditorWindow {
     Button startCrop = new StartCropButton(currentX, currentY, buttonW, buttonH);
     currentY += buttonH + spacing;
     buttonList.add(startCrop);
+    
   }
 
   public void updateImage(String path) {

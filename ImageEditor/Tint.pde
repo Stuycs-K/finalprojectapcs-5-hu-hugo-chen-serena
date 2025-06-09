@@ -18,9 +18,9 @@ public class Tint {
    public color changeExposure(PImage img, int x, int y, String colour) {
     
     color c = img.get(x, y);
-    float r = red(c) * 1.2;
-    float g = green(c) * 1.1;
-    float b = blue(c) * 0.9;
+    float r = red(c) * 0.9;
+    float g = green(c) * 1.0;
+    float b = blue(c) * 1.5;
 
     // Clamp values to 0–255
     r = constrain(r, 0, 255);
