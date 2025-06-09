@@ -10,7 +10,7 @@ public class Tint {
     for (int r = 0; r < source.width; r++) {
       for (int c = 0; c < source.height; c++) {
         //destination.get(r, c) = calcNewColor(source, r, c);
-        destination.set(r, c, changeExposure(source, r, c, "Orange"));
+        destination.set(r, c, changeExposure(source, r, c, colour));
       }
     }
    }
@@ -18,9 +18,24 @@ public class Tint {
    public color changeExposure(PImage img, int x, int y, String colour) {
     
     color c = img.get(x, y);
-    float r = red(c) * 0.9;
-    float g = green(c) * 1.0;
-    float b = blue(c) * 1.5;
+    float r, g, b = 0;
+    
+    if (colour.equals("Orange")) {
+      r = red(c) * 0.9;
+      g = green(c) * 1.0;
+      b = blue(c) * 1.5;
+    }
+    else if (colour.equals("Blue")) {
+      r = red(c) * 0.9;
+      g = green(c) * 1.0;
+      b = blue(c) * 1.5;
+    }
+    else {
+      r = red(c);
+      g = green(c);
+      b = blue(c);
+    }
+      
 
     // Clamp values to 0–255
     r = constrain(r, 0, 255);

@@ -94,13 +94,14 @@ public class EditorWindow {
     currentY += buttonH + spacing;
     buttonList.add(vignettingButton);
 
-    Button tintButton = new ModifyButton(currentX, currentY, buttonW, buttonH, "Tint", "Tint");
+    Button orangeTintButton = new ModifyButton(currentX, currentY, buttonW, buttonH, "Orange Tint", "Orange Tint");
     currentY += buttonH + spacing;
-    buttonList.add(tintButton);
+    buttonList.add(orangeTintButton);
+    
+    Button blueTintButton = new ModifyButton(currentX, currentY, buttonW, buttonH, "Blue Tint", "Blue Tint");
+    currentY += buttonH + spacing;
+    buttonList.add(blueTintButton);
 
-    //Button filtersButton = new ModifyButton(currentX, currentY, buttonW, buttonH, "Filter", "Filter");
-    //currentY += buttonH + spacing;
-    //buttonList.add(filtersButton);
 
     Button undoButton = new ModifyButton(currentX, currentY, buttonW, buttonH, "Undo", "Undo");
     currentY += buttonH + spacing;
